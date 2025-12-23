@@ -1,0 +1,18 @@
+---Models in module 'txt_bank_lo_pe'---
+---Fields in module 'txt_bank_lo_pe'---
+---XML records in module txt_bank_lo_pe---
+----------------------------------------------------------------
+DEPENDS  [hr_payroll ]
+module: 
+field:
+xml_id: hr_payroll.view_hr_payslip_tree
+
+DEPENDS  [hr_localization_menu ]
+module: 
+field:
+xml_id: 
+
+DEPENDS  [type_bank_accounts ]
+module: 
+field:
+xml_id: 

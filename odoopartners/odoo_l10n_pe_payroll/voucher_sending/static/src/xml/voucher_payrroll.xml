@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="employee_signature_payslip" inherit_id="voucher_payroll.body_voucher_payslip">
+        <xpath expr="//div[@name='employee_sign']" position="replace">
+            <div style="width: 50%;height: 100px;float: left;">
+                <t t-if="o.status == 'signed'">
+                    <t t-if="o.employee_id.employee_signature">                
+                        <div style="text-align: center;word-spacing: 1px;">
+                            <br/>
+                            <span t-esc="o.employee_id.employee_signature" class="resize_image" t-options="{'widget': 'image'}"/>
+                            <br/>______________________________
+                            <br />
+                            <span t-field="o.employee_id"/> 
+                            <br />
+                            <t t-esc="o.employee_id.type_identification_id.name"/> 
+                            (<t t-esc="o.employee_id.type_identification_id.country_id.code"/>) : 
+                            <t t-esc="o.employee_id.identification_id"/>
+                        </div>
+                    </t>
+                </t>
+                <t t-else="">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div style="text-align: center;word-spacing: 1px;">
+                        <div style="width: 50% !important;height: 10px!important"/>_____________________________
+                        <br />
+                        <span t-field="o.employee_id"/>
+                        <br />
+                        <t t-if="o.employee_id.type_identification_id and o.employee_id.identification_id">
+                            <t t-esc="o.employee_id.type_identification_id.name"/> 
+                            (<t t-esc="o.employee_id.type_identification_id.country_id.code"/>) : 
+                            <t t-esc="o.employee_id.identification_id"/>
+                        </t>
+                    </div>
+                </t>
+            </div>
+        </xpath>
+    </template>
+</odoo>

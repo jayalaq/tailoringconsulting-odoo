@@ -1,0 +1,14 @@
+---Models in module 'personal_information'---
+---Fields in module 'personal_information'---
+personal_information      / hr.employee.relative     / age (float)                   : change type field float -> integer
+---XML records in module 'personal_information'---
+DEL ir.ui.view: personal_information.hr_employee_view_form
+UPD ir.model.access: personal_information.access_hr_employee_relative_employee -> personal_information.access_hr_employee_relative
+UPD ir.model.access: personal_information.access_hr_employee_relative_user -> personal_information.access_hr_employee_relative_manager
+UPD ir.model.access: personal_information.access_hr_employee_relative_relation_employee -> personal_information.access_hr_employee_relative_relation
+UPD ir.model.access: personal_information.access_hr_employee_relative_relation_user -> personal_information.access_hr_employee_relative_relation_manager
+----------------------------------------------------------------
+DEPENDS 
+model:HR
+field:
+xml_id: hr.view_employee_form

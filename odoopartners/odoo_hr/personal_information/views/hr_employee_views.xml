@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_employee_view_form_inherit_personal_information" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.inherit.personal_information</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="spouse_complete_name" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="spouse_birthdate" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="children" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <xpath expr="//label[@for='private_street']" position="before">
+                <field name="firstname"/>
+                <field name="lastname"/>
+                <field name="secondname"/>
+            </xpath>
+            <xpath expr="//page[@name='personal_information']" position="after">
+                <page string="Parientes" name="employee_relative" groups="hr.group_hr_user">
+                    <field name="relative_ids" nolabel="1"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

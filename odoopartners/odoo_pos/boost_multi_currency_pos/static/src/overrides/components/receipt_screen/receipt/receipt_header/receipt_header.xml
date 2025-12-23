@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="boost_multi_currency_pos.ReceiptHeader" t-inherit="point_of_sale.ReceiptHeader" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('cashier')]" position="after">
+            <div>
+                <t t-if="props.data.curr_receipt_mode">
+                    Currency: <t t-esc="props.data.dict_curr_list[props.data.order_currency_id].name"/>
+                </t>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

@@ -1,0 +1,4 @@
+---Models in module 'payroll_batches_without_employees'---
+---Fields in module 'payroll_batches_without_employees'---
+---XML records in module 'payroll_batches_without_employees'---
+UPD ir.ui.view:             payroll_batches_without_employees.hr_payslip_employees_form_view_inherit_payroll_batches_without_employees                  -> payroll_batches_without_employees.hr_payslip_employees_view_form_inherit_payroll_batches_without_employees

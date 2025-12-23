@@ -1,0 +1,1 @@
+from . import test_qr_on_sale_invoice

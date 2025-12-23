@@ -1,0 +1,10 @@
+---Models in module 'add_user_by_journal'---
+---Fields in module 'add_user_by_journal'---
+---XML records in module 'add_user_by_journal'---
+UPD ir.ui.view: add_user_by_journal.add_field_assign_to_inherit_view_form -> add_user_by_journal.account_journal_view_form_inherit_add_user_by_journal
+---Change dates in the model 'account_journal'-----
+----------------------------------------------------------------
+DEPENDS [ account ]
+model:
+field:
+xml_id: account.view_account_journal_form

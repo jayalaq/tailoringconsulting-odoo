@@ -1,0 +1,9 @@
+---Models in module 'struct_rules_days'---
+---Fields in module 'struct_rules_days'---
+---XML records in module struct_rules_days---
+UPD ir.ui.view: hr_payroll_structure_form_view_inherit_struct_rules_days -> hr_payroll_structure_view_form_inherit_struct_rules_days
+----------------------------------------------------------------
+DEPENDS 
+module: hr_payroll
+field:
+xml_id: hr_payroll.view_hr_employee_grade_form

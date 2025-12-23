@@ -1,0 +1,143 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_validation_by_document
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-14 16:11+0000\n"
+"PO-Revision-Date: 2024-02-14 16:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "- The identification number cannot contain only zeros."
+msgstr "- El número de identificación no puede contener sólo ceros."
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "- The identification number contains not allowed characters."
+msgstr "- El número de identificación contiene caracteres no permitidos."
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "- The identification number must contain only numbers."
+msgstr "- El número de identificación debe contener únicamente números."
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid ""
+"- The number of characters for the identification number must be at most: "
+"${docLength}."
+msgstr ""
+"- El número de caracteres del número de identificación debe ser como máximo: "
+"${docLength}."
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid ""
+"- The number of characters for the identification number must be: "
+"${docLength}."
+msgstr ""
+"- El número de caracteres para el número de identificación debe ser: "
+"${docLength}."
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Choose a client who has a fiscal identification document."
+msgstr "Eliga un cliente que tenga un documento de identificación fiscal."
+
+#. module: pos_validation_by_document
+#: model:ir.model,name:pos_validation_by_document.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Customer Required"
+msgstr "Se Requiere Cliente"
+
+#. module: pos_validation_by_document
+#: model:ir.model.fields,field_description:pos_validation_by_document.field_pos_config__identify_client
+#: model:ir.model.fields,field_description:pos_validation_by_document.field_res_config_settings__pos_identify_client
+msgid "Identify Customer From"
+msgstr "Identificar cliente desde"
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid ""
+"It is suggested to use another sales document or change the client's "
+"identification type."
+msgstr ""
+"Se sugiere utilizar otro documento de venta o cambiar el tipo de identificación "
+"del cliente."
+
+#. module: pos_validation_by_document
+#: model:ir.model,name:pos_validation_by_document.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración de Punto de Venta"
+
+#. module: pos_validation_by_document
+#: model:ir.model,name:pos_validation_by_document.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Sesion de Punto de Venta"
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "The amount of the sale is greater than  so you must identify a client."
+msgstr "El importe de la venta es mayor a  por lo que debe identificar un cliente."
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "The customer must have an identification number."
+msgstr "El cliente debe tener un número de identificación."
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Validation Error"
+msgstr "Error de Validación"
+
+#. module: pos_validation_by_document
+#. odoo-javascript
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#: code:addons/pos_validation_by_document/static/src/js/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "You must select a customer."
+msgstr "Debe seleccionar un cliente."

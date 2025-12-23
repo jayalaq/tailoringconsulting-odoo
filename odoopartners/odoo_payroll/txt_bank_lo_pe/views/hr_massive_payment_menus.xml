@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="action_hr_massive_payment" model="ir.actions.act_window">
+        <field name="name">Pago Masivo</field>
+        <field name="res_model">hr.massive.payment</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+    <menuitem id="hr_localization_menu_root_hr_massive_payment"
+              name="Pago Masivo"
+              parent="hr_localization_menu.hr_localization_menu_root"
+              action="action_hr_massive_payment"
+    />
+
+</odoo>

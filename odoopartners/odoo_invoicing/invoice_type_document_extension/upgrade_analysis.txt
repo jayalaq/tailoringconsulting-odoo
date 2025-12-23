@@ -1,0 +1,13 @@
+---Models in module 'invoice_type_document_extension'---
+---Fields in module 'invoice_type_document_extension'---
+---XML records in module 'invoice_type_document_extension'---
+----------------------------------------------------------------
+DEPENDS [ purchase_stock ]
+model:  stock.picking
+field:  purchase_id
+xml_id: 
+
+DEPENDS [ sale_stock ]
+model:  stock.picking
+field:  sale_id
+xml_id: 

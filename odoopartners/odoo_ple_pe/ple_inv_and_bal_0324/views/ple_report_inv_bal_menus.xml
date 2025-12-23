@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="ple_report_inv_bal_324_action" model="ir.actions.act_window">
+        <field name="name">3.24 Estado de Resultados Integrales</field>
+        <field name="res_model">ple.report.inv.bal.24</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_ple_inv_bal_324"
+              name="3.24 Estado de Resultados Integrales"
+              parent="ple_sale_book.menu_ple_inv_bal"
+              action="ple_report_inv_bal_324_action"
+              sequence="50"
+    />
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_country_view_form_inherit_sunat_t_registro" model="ir.ui.view">
+        <field name="name">res.country.view.form.inherit.sunat_t_registro</field>
+        <field name="model">res.country</field>
+        <field name="inherit_id" ref="base.view_country_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="cod_pas_only"/>
+                <field name="nacionality_code_rc"/>
+            </xpath>
+        </field>
+    </record>
+</odoo> 

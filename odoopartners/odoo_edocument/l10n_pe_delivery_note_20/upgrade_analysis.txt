@@ -1,0 +1,9 @@
+---Models in module 'l10n_pe_delivery_note_20'---
+---Fields in module 'l10n_pe_delivery_note_20'---
+---XML records in module 'l10n_pe_delivery_note_20'---
+UPD template: inherid_id  delivery.report_delivery_document2 -> stock_delivery.report_delivery_document2
+UPD change in the xpath for id=invoicing_peruvian_settings div ---> block
+UPD view_picking_edi_form_inherit_l10n_pe_delivery_note_20 , change atribute attrs -> attribute invisible
+UPD view_picking_edi_form_inherit_l10n_pe_delivery_note_20 , change attrs -> invisible , required
+ADD data/edi_delivery_guide_inherit.xml COPY from l10n_pe_edi_stock_20 v16
+UPD change filename edu_delivery_guide  to edu_delivery_guide_inherit

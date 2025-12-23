@@ -1,0 +1,14 @@
+---Models in module 'asset_intangible'---
+---Fields in module 'asset_intangible'---
+---XML records in module 'asset_intangible'---
+UPD ir.ui.view: asset_intangible.account_move_line_tree_view_inherit_asset_intangible  --> asset_intangible.account_move_line_view_tree_inherit_asset_intangible
+UPD ir.ui.view: asset_intangible.account_move_form_view_inherit_asset_intangible --> asset_intangible.account_move_view_form_inherit_asset_intangible
+UPD ir.ui.view: asset_intangible.asset_intangible_form_view --> asset_intangible.asset_intangible_view_form
+UPD ir.ui.view: asset_intangible.asset_intangible_tree_view  --> asset_intangible.asset_intangible_view_tree
+UPD ir.ui.view: asset_intangible.asset_intangible_search_view  --> asset_intangible.asset_intangible_view_search
+----------------------------------------------------------------
+DEPENDS [ account ]
+model:  
+field:  
+xml_id: 
+ 

@@ -1,0 +1,4 @@
+---Models in module 'type_bank_accounts'---
+---Fields in module 'type_bank_accounts'---
+---XML records in module 'type_bank_accounts'---
+-----------------------------------------------------------------------------

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="account_payment_view_form_inherit_ple_cash_book_ee" model="ir.ui.view">
+        <field name="name">account.payment.view.form.inherit.ple_cash_book_ee</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="ple_cash_book.account_payment_view_form_inherit_ple_cash_book"/>
+        <field name="arch" type="xml">
+            <field name="means_payment_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

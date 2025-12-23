@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="action_asset_intangible" model="ir.actions.act_window">
+        <field name="name">Asset / Intangible</field>
+        <field name="res_model">asset.intangible</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_administrator_asset_intangible"
+              parent="account.menu_finance_entries"
+              name="Administration"
+              sequence="3"/>
+              
+    <menuitem id="menu_action_asset_intangible"
+              name="Asset / Intangible"
+              action="action_asset_intangible"
+              parent="asset_intangible.menu_administrator_asset_intangible"
+              groups="account.group_account_readonly"
+              sequence="1"/>
+
+</odoo>

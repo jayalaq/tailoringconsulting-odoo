@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="account_move_view_form_inherit_document_in_supplier_invoice" model="ir.ui.view">
+            <field name="name">account.move.view.move.form.inherit.document_in_supplier_invoice</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+
+                <field name="l10n_latam_document_type_id" position="attributes">
+                    <attribute name="invisible">not l10n_latam_use_documents and move_type not in ('in_invoice', 'in_refund', 'out_invoice', 'out_refund')</attribute>
+                    <attribute name="rerquired">l10n_latam_use_documents and move_type not in ('in_invoice', 'in_refund', 'out_invoice', 'out_refund')</attribute>
+                    <attribute name="readonly">posted_before</attribute>
+                    <attribute name="domain">[('id', 'in', l10n_latam_available_document_type_ids)]</attribute>
+                </field>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

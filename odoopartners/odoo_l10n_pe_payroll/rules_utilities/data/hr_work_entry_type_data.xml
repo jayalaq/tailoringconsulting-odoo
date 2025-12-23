@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="hr_work_entry_type_dias_010" model="hr.work.entry.type">
+            <field name="code">DIAS_010</field>
+            <field name="name">Total días laborados</field>
+        </record>
+
+    </data>
+</odoo>

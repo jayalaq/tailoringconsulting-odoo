@@ -1,0 +1,17 @@
+---Models in module 'ple_inv_and_bal_0301_ee'---
+---Fields in module 'ple_inv_and_bal_0301_ee'---
+---XML records in module 'ple_inv_and_bal_0301_ee'---
+UPD ir.ui.view: ple_inv_and_bal_0301_ee.ple_inv_bal_line_initial_balances_tree_view --> ple_inv_and_bal_0301.ple_inv_bal_line_initial_balances_view_tree
+
+UPD ir.ui.view: ple_inv_and_bal_0301_ee.view_wizard_report_txt_ple_3_1 --> ple_inv_and_bal_0301_ee.wizard_report_txt_ple_3_1_view_form
+UPD ir.ui.view: ple_inv_and_bal_0301_ee.account_financial_html_report_line_form_inherit_ple_inv_and_bal_0301_ee --> ple_inv_and_bal_0301_ee.account_report_line_view_form_inherit_ple_inv_and_bal_0301_ee
+----------------------------------------------------------------
+DEPENDS [ ple_sale_book ]
+model:
+field:
+xml_id:
+
+DEPENDS [ l10n_pe_catalog ]
+model:
+field:
+xml_id:

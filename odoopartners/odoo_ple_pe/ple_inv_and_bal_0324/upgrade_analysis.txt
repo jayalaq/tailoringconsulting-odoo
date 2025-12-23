@@ -1,0 +1,19 @@
+---Models in module 'ple_inv_and_bal_0324'---
+---Fields in module 'ple_inv_and_bal_0324'---
+---XML records in module 'ple_inv_and_bal_0324'---
+UPD ir.ui.view: ple_inv_and_bal_0324.account_account_form_view_inherit_ple_inv_and_bal_0324         --> ple_inv_and_bal_0324.account_account_view_form_inherit_ple_inv_and_bal_0324
+UPD ir.ui.view: ple_inv_and_bal_0324.account_move_line_tree_view_inherit_ple_inv_and_bal_0324_one   --> ple_inv_and_bal_0324.account_move_line_view_tree_inherit_ple_inv_and_bal_0324_one
+UPD ir.ui.view: ple_inv_and_bal_0324.account_move_line_tree_view_inherit_ple_inv_and_bal_0324_two   --> ple_inv_and_bal_0324.account_move_line_view_tree_inherit_ple_inv_and_bal_0324_two
+UPD ir.ui.view: ple_inv_and_bal_0324.ple_report_inv_bal_324_form_view                               --> ple_inv_and_bal_0324.ple_report_inv_bal_0324_view_form
+UPD ir.ui.view: ple_inv_and_bal_0324.ple_report_inv_bal_324_tree_view                               --> ple_inv_and_bal_0324.ple_report_inv_bal_0324_view_tree
+---Reports in the t-field="company.partner_id.name"---
+----------------------------------------------------------------
+DEPENDS [ ple_sale_book ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ ple_inv_and_bal_0301 ]
+model:  
+field:
+xml_id:

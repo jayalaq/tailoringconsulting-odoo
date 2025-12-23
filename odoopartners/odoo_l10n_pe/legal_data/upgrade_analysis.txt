@@ -1,0 +1,15 @@
+---Models in module 'legal_data'---
+---Fields in module 'legal_data'---
+---XML records in module 'legal_data'---
+UPD ir.ui.view: legal_data.res_company_form_inherit_legal_data -> legal_data.res_company_view_form_inherit_legal_data
+----------------------------------------------------------------
+DEPENDS [ base ]
+model:  res_company
+field:  legal_representative,
+        object_company
+xml_id: base.view_company_form
+
+DEPENDS [ l10n_co_edi ]
+model:  res_partner
+field:  l10n_co_edi_fiscal_regimen
+xml_id: 

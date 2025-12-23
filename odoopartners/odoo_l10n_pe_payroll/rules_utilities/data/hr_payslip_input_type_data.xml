@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="hr_payslip_input_type_utl_003" model="hr.payslip.input.type">
+            <field name="name">Factor días laborados Utilidades</field>
+            <field name="code">UTL_003</field>
+            <field name="country_id" ref="base.pe"/>
+            <field name="struct_ids" eval="[(4, ref('rules_utilities.hr_payroll_structure_utilidades'))]"/>
+        </record>
+
+        <record id="hr_payslip_input_type_utl_004" model="hr.payslip.input.type">
+            <field name="name">Factor remuneración Utilidades</field>
+            <field name="code">UTL_004</field>
+            <field name="country_id" ref="base.pe"/>
+            <field name="struct_ids" eval="[(4, ref('rules_utilities.hr_payroll_structure_utilidades'))]"/>
+        </record>
+
+    </data>
+</odoo>

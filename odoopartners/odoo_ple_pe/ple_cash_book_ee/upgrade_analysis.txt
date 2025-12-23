@@ -1,0 +1,17 @@
+---Models in module 'ple_cash_book_ee'---
+---Fields in module 'ple_cash_book_ee'---
+---XML records in module 'ple_cash_book_ee'---
+
+--------------------------------------------------------------
+DEPENDS [ ple_cash_book ]
+model:  
+field:
+xml_id:
+    ple_cash_book.account_payment_register_view_form_inherit_ple_cash_book
+    ple_cash_book.account_payment_view_form_inherit_ple_cash_book
+
+DEPENDS [ account_accountant ]
+model:  
+field:
+xml_id:
+    account_accountant.view_bank_statement_line_tree_bank_rec_widget

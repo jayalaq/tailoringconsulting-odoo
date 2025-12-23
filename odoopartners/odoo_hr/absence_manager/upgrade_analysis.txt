@@ -1,0 +1,30 @@
+---Models in module 'absence_manager'---
+---Fields in module 'absence_manager'---
+---XML records in module 'absence_manager'---
+UPD ir.cron:                absence_manager.hr_leave_view_form_manager_inherit_absence_manager  -> absence_manager.hr_leave_cron_action_absence
+UPD ir.ui.view:             absence_manager.hr_leave_type_data_form_inherit                     -> absence_manager.hr_leave_type_view_form_inherit_absence_manager
+----------------------------------------------------------------
+DEPENDS [ hr_attendance]
+model: hr_attendance
+field:  holiday_status_id
+xml_id: hr_attendance.view_attendance_tree
+
+DEPENDS [ hr_holidays ]
+model: hr_leave_type
+field:  code
+xml_id: hr_holidays.edit_holiday_status_form
+
+model: hr_leave
+field:  report_attendance,
+        hr_attendance_ids
+xml_id: hr_holidays.hr_leave_view_form
+
+DEPENDS [ absence_day ]
+model: 
+field:  
+xml_id: 
+
+DEPENDS [ hr ]
+model: hr_employee
+field:  attendance
+xml_id: hr.view_employee_form

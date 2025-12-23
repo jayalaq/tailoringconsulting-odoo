@@ -1,0 +1,249 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_employee_access_premium
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-29 19:43+0000\n"
+"PO-Revision-Date: 2023-12-29 19:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_cash_in_out
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_cash_in_out
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_cash_in_out
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_cash_in_out
+msgid "Access Cash In/Out"
+msgstr "Acceso a la entrada/salida de efectivo"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_change_price
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_change_price
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_change_price
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_change_price
+msgid "Access Change Price"
+msgstr "Acceso para cambiar el precio"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_close
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_close
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_close
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_close
+msgid "Access Close POS"
+msgstr "Acceso para cerrar el TPV"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_decrease_quantity_order_lines
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_decrease_quantity_order_lines
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_decrease_quantity_order_lines
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_decrease_quantity_order_lines
+msgid "Access Decrease Quantity Order Lines"
+msgstr "Acceso para disminuir la cantidad en las líneas de la orden"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_delete_order_lines
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_delete_order_lines
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_delete_order_lines
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_delete_order_lines
+msgid "Access Delete Order Lines"
+msgstr "Acceso para eliminar las líneas de la orden"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_delete_orders
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_delete_orders
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_delete_orders
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_delete_orders
+msgid "Access Delete Orders"
+msgstr "Acceso para eliminar las órdenes"
+
+#. module: pos_employee_access_premium
+#. odoo-javascript
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_list/product_list.js:0
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_screen/product_screen.js:0
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_screen/product_screen.js:0
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_screen/product_screen.js:0
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_screen/product_screen.js:0
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/refund_button/refund_button.js:0
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/ticket_screen/ticket_screen.js:0
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/ticket_screen/ticket_screen.js:0
+#: code:addons/pos_employee_access_premium/static/src/overrides/models/models.js:0
+#, python-format
+msgid "Access Denied"
+msgstr "Acceso denegado"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_make_discounts
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_make_discounts
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_make_discounts
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_make_discounts
+msgid "Access Make Discounts"
+msgstr "Acceso para realizar descuentos"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_make_payments
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_make_payments
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_make_payments
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_make_payments
+msgid "Access Make Payments"
+msgstr "Acceso para realizar pagos"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_make_refunds
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_make_refunds
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_make_refunds
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_make_refunds
+msgid "Access Make Refunds"
+msgstr "Acceso para realizar reembolsos"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Accesses Point of Sale"
+msgstr "Accesos Punto de Venta"
+
+#. module: pos_employee_access_premium
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee__pos_access_product_information
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_base__pos_access_product_information
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_hr_employee_public__pos_access_product_information
+#: model:ir.model.fields,field_description:pos_employee_access_premium.field_res_users__pos_access_product_information
+msgid "Access Product Information"
+msgstr "Acceso a la información del producto"
+
+#. module: pos_employee_access_premium
+#: model:ir.model,name:pos_employee_access_premium.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "Empleado Básico"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Cash In/Out"
+msgstr "Entrada/Salida de efectivo"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Change Price"
+msgstr "Cambiar el precio"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Close POS"
+msgstr "Cerrar TPV"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Decrease Quantity Order Lines"
+msgstr "Disminuir la cantidad en las líneas de la orden"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Delete Order Lines"
+msgstr "Eliminar las líneas de la órden"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Delete Orders"
+msgstr "Eliminar las órdenes"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Make Discounts"
+msgstr "Realizar descuentos"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Make Payments"
+msgstr "Realizar pagos"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Make Refunds"
+msgstr "Realizar reembolsos"
+
+#. module: pos_employee_access_premium
+#: model:ir.model,name:pos_employee_access_premium.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Sesión TPV"
+
+#. module: pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+#: model_terms:ir.ui.view,arch_db:pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+msgid "Product Information"
+msgstr "Información del producto"
+
+#. module: pos_employee_access_premium
+#: model:ir.model,name:pos_employee_access_premium.model_res_users
+msgid "User"
+msgstr "Usuario"
+
+#. module: pos_employee_access_premium
+#. odoo-javascript
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_screen/product_screen.js:0
+#, python-format
+msgid "You do not have access to change the price."
+msgstr "No tienes acceso para cambiar el precio."
+
+#. module: pos_employee_access_premium
+#. odoo-javascript
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_screen/product_screen.js:0
+#, python-format
+msgid "You do not have access to decrease the quantity on order lines."
+msgstr "No tiene acceso para disminuir la cantidad en las líneas de la orden."
+
+#. module: pos_employee_access_premium
+#. odoo-javascript
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_screen/product_screen.js:0
+#, python-format
+msgid "You do not have access to delete order lines."
+msgstr "No tiene acceso para eliminar las líneas de la orden."
+
+#. module: pos_employee_access_premium
+#. odoo-javascript
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/ticket_screen/ticket_screen.js:0
+#, python-format
+msgid "You do not have access to delete orders."
+msgstr "No tienes acceso para eliminar las órdenes."
+
+#. module: pos_employee_access_premium
+#. odoo-javascript
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_screen/product_screen.js:0
+#, python-format
+msgid "You do not have access to make discounts"
+msgstr "No tienes acceso para realizar descuentos."
+
+#. module: pos_employee_access_premium
+#. odoo-javascript
+#: code:addons/pos_employee_access_premium/static/src/overrides/models/models.js:0
+#, python-format
+msgid "You do not have access to make payments."
+msgstr "No tienes acceso para realizar pagos."
+
+#. module: pos_employee_access_premium
+#. odoo-javascript
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/refund_button/refund_button.js:0
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/ticket_screen/ticket_screen.js:0
+#, python-format
+msgid "You do not have access to make refunds."
+msgstr "No tienes acceso para realizar reembolsos."
+
+#. module: pos_employee_access_premium
+#. odoo-javascript
+#: code:addons/pos_employee_access_premium/static/src/overrides/components/product_list/product_list.js:0
+#, python-format
+msgid "You do not have access to product information."
+msgstr "No tienes acceso a la información del producto."

@@ -1,0 +1,10 @@
+---Models in module 'dua_in_invoice'---
+---Fields in module 'dua_in_invoice'---
+---XML records in module 'dua_in_invoice'---
+
+----------------------------------------------------------------
+DEPENDS 
+model: purchase_document_type_validation
+field:
+xml_id:
+    account_move_form_view_inherit_purchase_document_type_validation

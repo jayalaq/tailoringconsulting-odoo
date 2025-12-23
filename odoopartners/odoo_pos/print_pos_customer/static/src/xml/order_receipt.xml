@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderReceipt" t-inherit="point_of_sale.ReceiptHeader" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('pos-receipt-contact')]" position="inside">
+            <t t-if="props.data.partner and props.data.company.country.code !== 'CL'">
+                <div>Customer:
+                    <t t-esc='props.data.partner.name'/>
+                </div>
+                <div>No.:
+                    <t t-esc='props.data.partner.vat'/>
+                </div>
+                <div>Direction:
+                    <t t-esc='props.data.partner.address'/>
+                </div>
+            </t>
+        </xpath>
+    </t>
+</templates>

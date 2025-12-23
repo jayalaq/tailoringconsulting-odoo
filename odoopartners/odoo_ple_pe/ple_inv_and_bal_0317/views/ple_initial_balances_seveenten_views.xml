@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="ple_initial_balances_seveenten_tree_view" model="ir.ui.view">
+        <field name="name">ple.initial.balances.seveenten.tree.view</field>
+        <field name="model">ple.initial.balances.seveenten</field>
+        <field name="arch" type="xml">
+            <tree editable="top" create="1" delete="1" multi_edit="1">
+                <field name="trial_balances_catalog_id"/>
+                <field name="name"/>
+                <field name="debit"/>
+                <field name="credit"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

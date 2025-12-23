@@ -1,0 +1,6 @@
+
+---Models in module 'PLE_INV_AND_BAL_0315'---
+---Fields in module 'PLE_INV_AND_BAL_0315'---
+account                 / account.account                   / account.account.user_type_id.include_initial_balance -> account.account.include_initial_balance
+---XML records in module 'PLE_INV_AND_BAL_0315'---
+UPD view ple_inv_and_bal_315_sale_form_view  --> ple_inv_and_bal_0315_view_form

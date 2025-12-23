@@ -1,0 +1,15 @@
+---Models in module 'additional_fields_voucher'---
+---Fields in module 'additional_fields_voucher'---
+---XML records in module 'additional_fields_voucher'---
+
+UPD ir.ui.view: view_hr_struct_days_inherit_additional_fields_voucher -> hr_payroll_structure_view_form_inherit_additional_fields_voucher
+
+DEPENDS 
+model:hr
+field:
+xml_id: hr.view_employee_form
+
+DEPENDS 
+model:hr_payroll
+field:
+xml_id: hr_payroll.view_hr_employee_grade_form

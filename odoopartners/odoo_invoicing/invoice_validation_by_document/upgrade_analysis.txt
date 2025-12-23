@@ -1,0 +1,5 @@
+---Models in module 'invoice_validation_by_document'---
+---Fields in module 'invoice_validation_by_document'---
+---XML records in module 'invoice_validation_by_document'---
+NEW ir.ui.view: l10n_latam_identification_type_view_form_inherit_invoice_validation_document
+DEL ir.ui.view: add_invoice_validation_document_view_form_inherit (OLD)

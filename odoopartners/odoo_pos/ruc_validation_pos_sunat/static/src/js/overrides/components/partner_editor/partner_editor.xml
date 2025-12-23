@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.PartnerDetailsEdit" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('partner-details-box')]" position="inside">
+            <div class='partner-detail col'>
+                <label class="form-label label" for="state_contributor_sunat">Est. Contrib.</label>
+                <input
+                    id='state_contributor_sunat'
+                    class='detail form-control partner-state-contributor-sunat'
+                    name='state_contributor_sunat'
+                    t_model='changes.state_contributor_sunat'
+                    placeholder='Estado Contribuyente'
+                    t-att-value='props.partner.state_contributor_sunat || ""'/>
+            </div>
+            <div class='partner-detail col'>
+                <label class="form-label label" for="condition_contributor_sunat">Cond. Contrib.</label>
+                <input
+                    id='condition_contributor_sunat'
+                    class='detail form-control partner-condition-contributor-sunat'
+                    name='condition_contributor_sunat'
+                    t_model='changes.condition_contributor_sunat'
+                    placeholder='Condición Contribuyente'
+                    t-att-value='props.partner.condition_contributor_sunat || ""'/>
+            </div>
+            <div class='partner-detail' style="display: none;">
+                <span class='label'>Validación?</span>
+                <input type="checkbox" class='detail validation-ruc' id="validation-ruc"/>
+            </div>
+        </xpath>
+    </t>
+</templates>

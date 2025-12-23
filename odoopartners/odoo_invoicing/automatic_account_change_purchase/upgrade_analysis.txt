@@ -1,0 +1,5 @@
+---Models in module 'automatic_account_change_purchase'---
+---Fields in module 'automatic_account_change_purchase'---
+---XML records in module 'automatic_account_change_purchase'---
+----------------------------------------------------------------
+DEPENDS 

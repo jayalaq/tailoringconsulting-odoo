@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_move_view_form_inherit_l10n_pe_efact_027" model="ir.ui.view">
+        <field name="name">account.move.view.form.inherit.l10n_pe_efact_027</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']//tree/field[@name='display_type']" position="after">
+                <field name="reference_value_transportation_service" optional="hide"/>
+                <field name="reference_value_effective_load" optional="hide"/>
+                <field name="reference_value_on_nominal_payload" optional="hide"/>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']/tree/field[@name='account_id']" position="after">
+                <field name="reference_value_transportation_service" optional="hide"/>
+                <field name="reference_value_effective_load" optional="hide"/>
+                <field name="reference_value_on_nominal_payload" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

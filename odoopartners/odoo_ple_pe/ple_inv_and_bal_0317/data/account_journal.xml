@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<odoo>
+    
+    <data>
+        <function name="generate_account_journal" model="account.journal"/>
+    </data>
+    
+</odoo>

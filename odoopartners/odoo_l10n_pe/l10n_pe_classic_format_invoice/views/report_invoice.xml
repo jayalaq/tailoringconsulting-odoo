@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+       <!-- Change Format Invoices-->
+        <template id="account_view_template_inherit_l10n_pe_classic_format_invoice" inherit_id="account.report_invoice_document">
+            <xpath expr="//address" position="replace">
+                <t t-if="o.partner_id">
+                    <t t-if="o.partner_id.name" t-esc="o.partner_id.name"/>,
+                    <br></br>
+                    <t name="partner_street_id" t-if="o.partner_id.street" t-esc="o.partner_id.street"/>,
+                    <t t-if="o.partner_id.city_id and o.partner_id.city_id.name" t-esc="o.partner_id.city_id.name"/>,
+                    <t t-if="o.partner_id.state_id and o.partner_id.state_id.name" t-esc="o.partner_id.state_id.name"/>,
+                    <t t-if="o.partner_id.country_id and o.partner_id.country_id.name" t-esc="o.partner_id.country_id.name"/>
+                </t>
+            </xpath>
+        </template>
+</odoo>

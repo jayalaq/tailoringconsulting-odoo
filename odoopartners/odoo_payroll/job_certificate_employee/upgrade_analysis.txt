@@ -1,0 +1,8 @@
+---Models in module 'job_certificate_employee'---
+---Fields in module 'job_certificate_employee'---
+---XML records in module 'job_certificate_employee'---
+----------------------------------------------------------------
+DEPENDS [ HR ]
+model: hr.employee
+field:
+xml_id: view_employee_form

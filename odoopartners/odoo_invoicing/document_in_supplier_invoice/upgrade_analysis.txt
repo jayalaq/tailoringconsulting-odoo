@@ -1,0 +1,9 @@
+---Models in module 'document_in_supplier_invoice'---
+---Fields in module 'document_in_supplier_invoice'---
+---XML records in module 'document_in_supplier_invoice'---
+NEW ir.ui.view: account_move_view_form_inherit_document_in_supplier_invoice
+DEL ir.ui.view: add_attrs_view_move_form_inherit (OLD)
+NEW ir.ui.view: l10n_latam_document_type_view_form_inherit_document_in_supplier_invoice
+DEL ir.ui.view: add_account_journal_view_document_type_form_inherit (OLD)
+---XML filename 'document_in_supplier_invoice'---
+CHANGE latam.xml -> l10n_latam_identification_type.xml

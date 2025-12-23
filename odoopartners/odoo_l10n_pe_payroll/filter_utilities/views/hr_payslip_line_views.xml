@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="hr_payslip_line_view_search_inherit_filter_utilities" model="ir.ui.view">
+        <field name="name">hr.payslip.line.view.search.inherit.filter_utilities</field>
+        <field name="model">hr.payslip.line</field>
+        <field name="inherit_id" ref="payroll_fields.hr_payslip_line_view_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter" position="after">
+                <separator/>
+                <filter string="Utilidades" name="utilities_filter" domain="[('utilities','=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_payslip_line_view_tree_inherit_filter_utilities" model="ir.ui.view">
+        <field name="name">hr.payslip.line.view.tree.inherit.filter_utilities</field>
+        <field name="model">hr.payslip.line</field>
+        <field name="inherit_id" ref="payroll_fields.hr_payslip_line_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="code" position="after">
+                <field name="utilities" column_invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

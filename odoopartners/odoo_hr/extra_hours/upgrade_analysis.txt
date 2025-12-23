@@ -1,0 +1,57 @@
+---Models in module 'extra_hours'---
+---Fields in module 'extra_hours'---
+---XML records in module 'extra_hours'---
+UPD ir.ui.view: timesheet_view_search_extra_hours  -> account_analytic_line_view_search_inherit_extra_hours 
+UPD ir.ui.model: account.analytic.line.search.extra_hours  -> account.analytic.line.search.inherit.extra_hours
+
+UPD ir.ui.view: hr_timesheet_line_form_inherited_extra_hours ->account_analytic_line_view_form_inherit_extra_hours
+UPD ir.ui.model:account.analytic.line.form.inherit.extra_hours -> account.analytic.line.view.form.inherit.extra_hours
+
+UPD ir.ui.view: view_task_tree_inherited_extra_hours  -> account_analytic_line_view_tree_inherit_extra_hours
+UPD ir.ui.model:account.analytic.line.tree.inherit.extra_hours -> account.analytic.line.view.tree.inherit.extra_hours
+
+UPD ir.ui.view: action_account_analytic_line_he_menu -> overtime_analysis_menu_action
+
+UPD ir.ui.view: action_account_analytic_line_menu -> extra_hours_menu_action
+
+UPD ir.ui.view: action_account_analytic_line_tree -> account_analytic_line_tree_action
+
+UPD ir.ui.view: action_account_analytic_line_form -> account_analytic_line_form_action
+
+UPD ir.ui.view: action_validate_extra_hours -> validate_extra_hours_action
+
+UPD ir.ui.view: menu_hr_reports_account_analytic_line_eh -> account_analytic_line_inherit_overtime_analysis_menu
+
+UPD ir.ui.view: inherited_hr_attendance_view_filter_difference -> hr_attendance_view_filter_inherit_extra_hours
+UPD ir.ui.model:hr.attendance.inherit.filter.difference -> hr.attendance.view.filter.inherit.extra_hours
+
+UPD ir.ui.view: hr_attendance_view_form_inherit_dayofweek -> hr_attendance_view_form_inherit_extra_hours
+UPD ir.ui.model:hr.attendance.view.form.inherit_dayofweek -> hr.attendance.view.form.inherit.extra_hours
+
+UPD ir.ui.view: hr_attendance_view_tree_inherit_tolerance_tardiness ->hr_attendance_view_tree_inherit_extra_hours
+UPD ir.ui.model:hr.attendance.view.tree.tolerance.tardiness -> hr.attendance.view.tree.extra_hours
+
+UPD ir.ui.view: action_migrate_extra_hours_hr_attendance -> hr_attendance_migrate_extra_hours_action
+
+UPD ir.ui.view: action_migrate_hours_part_hr_attendance -> hr_attendance_migrate_hours_part_action
+
+UPD ir.ui.view: view_task_form2_inherited_extra_hours -> project_task_view_form_inherit_extra_hours
+UPD ir.ui.model:project.task.form.inherited.extra_hours -> project.task.view.form.inherit.extra_hours
+
+
+DEPENDS  hr.attendance
+model: account.analytic.line
+fields:
+xml_id :
+hr_attendance.hr_attendance_view_filter
+hr_attendance.hr_attendance_view_form
+hr_attendance.view_attendance_tree
+
+DEPENDS automatic_timesheets
+model: account.analytic.line
+fields:
+xml:
+hr_timesheet.hr_timesheet_line_search
+hr_timesheet.hr_timesheet_line_form
+hr_timesheet.hr_timesheet_line_tree
+hr_timesheet.view_task_form2_inherited

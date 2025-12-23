@@ -1,0 +1,9 @@
+---Models in module 'basic_rule'---
+---Fields in module 'basic_rule'---
+---XML records in module 'basic_rule'---
+UPD ir.ui.view: basic_rule.res_config_settings_form_view_inherit_basic_rule
+# Cambio en el xpath:
+# Antes: <xpath expr="//div[hasclass('app_settings_block')][@data-key='hr_payroll']" position="inside">
+# Ahora: <xpath expr="//app[@name='hr_payroll']" position="inside">
+----------------------------------------------------------------
+DEPENDS [ partner_concept ]

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+    
+        <record id="payment_type_1" model="payment.type">
+            <field name="name">EFECTIVO</field>
+            <field name="payment_description">EFECTIVO</field>
+            <field name="code">1</field>
+        </record>
+
+        <record id="payment_type_2" model="payment.type">
+            <field name="name">DEPÓSITO EN CUENTA</field>
+            <field name="payment_description">DEPÓSITO EN CUENTA</field>
+            <field name="code">2</field>
+        </record>
+
+        <record id="payment_type_3" model="payment.type">
+            <field name="name">OTROS</field>
+            <field name="payment_description">OTROS</field>
+            <field name="code">3</field>
+        </record>
+    
+    </data>
+</odoo>

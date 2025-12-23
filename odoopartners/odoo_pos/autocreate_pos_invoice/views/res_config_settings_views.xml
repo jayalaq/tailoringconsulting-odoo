@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form_inherit_autocreate_pos_invoice" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.autocreate_pos_invoice</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='pos_invoice_journal_id']" position="attributes">
+                <attribute name="domain">[('company_id', '=', company_id)]</attribute>
+            </xpath>
+            <xpath expr="//field[@name='pos_invoice_journal_id']/.." position="after">
+                <div class="row" id="pos_ticket_journal_id">
+                    <label string="Tickets" for="pos_ticket_journal_id" class="col-lg-3 o_light_label"/>
+                    <field name="pos_ticket_journal_id" domain="[('company_id', '=', company_id)]" required="pos_company_has_template" context="{'default_company_id': company_id, 'default_type': 'sale'}"/>
+                </div>
+            </xpath>
+            <xpath expr="//setting[@id='auto_printing']" position="after">
+                <setting id="pos_ticket_partner_id" help="Set this user in the POS order if it is empty">
+                    <field name="pos_ticket_partner_id"/>
+                </setting>
+                <setting id="pos_always_move_account" help="If this field is active, Odoo will try to generate an entry for each sale whose total amount is equal to or greater than the one set in the 'Amount to Bill' field and not only for invoices, in this way each sale will have its accounting entry">
+                    <field name="pos_always_move_account"/>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

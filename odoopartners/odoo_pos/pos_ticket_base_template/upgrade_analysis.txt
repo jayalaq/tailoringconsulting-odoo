@@ -1,0 +1,10 @@
+---Models in module 'pos_ticket_base_template'---
+---Fields in module 'pos_ticket_base_template'---
+pos_ticket_base_template      / pos.config          / automatic_print_electronic_invoice (boolean) : This module field was moved: select_invoice_format_pos
+pos_ticket_base_template      / pos.config          / automatic_download_electronic_invoice (boolean) : This module field was moved: select_invoice_format_pos
+pos_ticket_base_template      / res.config.settings / pos_automatic_print_electronic_invoice (boolean) : This module field was moved: select_invoice_format_pos
+pos_ticket_base_template      / res.config.settings / pos_automatic_download_electronic_invoice (boolean) : This module field was moved: select_invoice_format_pos
+---XML records in module 'pos_ticket_base_template'---
+NEW ir.ui.view: pos_ticket_base_template.res_config_settings_view_form_inherit_pos_ticket_base_template
+----------------------------------------------------------------
+DEPENDS

@@ -1,0 +1,11 @@
+---Models in module 'automatic_timesheets'---
+---Fields in module 'automatic_timesheets'---
+---XML records in module 'automatic_timesheets'---
+UPD ir.ui.view:  account_analytic_line_form_view_inherit_automatic_timesheets -> account_analytic_line_view_form_inherit_automatic_timesheets
+----------------------------------------------------------------
+DEPENDS 
+model:hr_timesheet
+field:unit_amount
+xml_id: hr_timesheet.hr_timesheet_line_form
+
+

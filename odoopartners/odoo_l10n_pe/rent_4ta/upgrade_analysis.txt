@@ -1,0 +1,4 @@
+---Models in module 'rent_4ta'---
+---Fields in module 'rent_4ta'---
+---XML records in module 'rent_4ta'---
+UPD ir.model.access: rent_4ta.res_partner_form_view_inherit_rent_4ta -> rent_4ta.res_partner_view_form_inherit_rent_4ta

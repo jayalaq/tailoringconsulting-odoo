@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="hr_payroll_structure_utilidades" model="hr.payroll.structure">
+            <field name="name">Utilidades</field>
+            <field name="country_id" ref="base.pe"/>
+            <field name="type_id" ref="basic_rule.hr_payroll_structure_type_general"/>
+            <field name="rule_ids" eval="[]"/>
+        </record>
+
+    </data>
+</odoo>

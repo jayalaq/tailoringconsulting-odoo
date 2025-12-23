@@ -1,0 +1,11 @@
+---Models in module 'l10n_pe_classic_format_invoice'---
+DEL field related_tax_documents_code:account.move 
+---Fields in module 'l10n_pe_classic_format_invoice'---
+---XML records in module 'l10n_pe_edocument_complement'---
+UPD ir.ui.view: view_move_form -> account_move_view_form_inherit_l10n_pe_classic_format_invoice
+UPD ir.ui.view: account_move_form_inherit.l10n_pe_classic_format_invoice -> account.move.view.form.inherit.l10n_pe_classic_format_invoice
+UPD template: report_invoice_document_inherit_add_district -> account_view_template_inherit_l10n_pe_classic_format_invoice
+UPD template: inherit_invoice_external_standard -> web_view_template_inherit_l10n_pe_classic_format_invoice
+UPD template: l10n_pe_external_layout_invoice_classic -> classic_format_invoice_template_inherit_l10n_pe_classic_format_invoice
+UPD template: l10n_pe_report_invoice_classic -> classic_format_invoice_template_inherit_l10n_pe_classic_format_invoice_report
+UPD fields: tax_totals_json -> tax_totals

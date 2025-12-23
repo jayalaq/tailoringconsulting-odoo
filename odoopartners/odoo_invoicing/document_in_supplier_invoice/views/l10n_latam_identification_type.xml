@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="l10n_latam_document_type_view_form_inherit_document_in_supplier_invoice" model="ir.ui.view">
+        <field name="name">l10n_latam.document.type.view.form.inherit.document_in_supplier_invoice</field>
+        <field name="model">l10n_latam.document.type</field>
+        <field name="inherit_id" ref="l10n_latam_invoice_document.view_document_type_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='country_id']" position="after">
+                <field name="account_journal_id" readonly="False"/>
+                <field name="account_journal_id_sale" readonly="False"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

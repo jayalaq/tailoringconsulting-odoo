@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ubl_21_InvoiceType_edocument" inherit_id="account_edi_ubl_cii.ubl_21_InvoiceType" primary="True">
+        <xpath expr="//*[local-name()='Signature']" position="before">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:AdditionalDocumentReference t-att="vals.get('advance_invoice', {})" t-foreach="vals.get('advance_invoice_vals', [])" t-as="foreach_vals">
+                    <cbc:ID schemeID="01" t-out="foreach_vals.get('advance_name')"/>
+                    <cbc:DocumentTypeCode listAgencyName="PE:SUNAT" listName="Documento Relacionado" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo12" t-out="foreach_vals.get('document_type_code')"/>
+                    <cbc:DocumentStatusCode listName="Anticipo" listAgencyName="PE:SUNAT" t-out="foreach_vals.get('id')"/>
+                    <cac:IssuerParty>
+                        <cac:PartyIdentification>
+                            <cbc:ID t-att-schemeAgencyID="foreach_vals.get('partner_document_type_code')"
+                                    schemeName="Documento de Identidad"
+                                    schemeAgencyName="PE:SUNAT"
+                                    schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06"
+                                    t-esc="foreach_vals.get('company_vat')"/>
+                        </cac:PartyIdentification>
+                    </cac:IssuerParty>
+                </cac:AdditionalDocumentReference>
+            </t>
+        </xpath>
+        <xpath expr="//*[local-name()='TaxTotal']" position="before">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:PrepaidPayment t-att="vals.get('advance_invoice', {})" t-foreach="vals.get('advance_invoice_vals', [])" t-as="advance_foreach_vals">
+                    <cbc:ID schemeName="Anticipo" schemeAgencyName="PE:SUNAT" t-out="advance_foreach_vals.get('id')"/>
+                    <cbc:PaidAmount t-att-currencyID="advance_foreach_vals.get('currency_name')" t-out="format_float(advance_foreach_vals.get('paid_amount'), vals.get('currency_dp'))"/>
+                </cac:PrepaidPayment>
+                <cac:AllowanceCharge t-att="vals.get('discount_invoice', {})" t-foreach="vals.get('discount_lines_vals', [])" t-as="discount_foreach_vals">
+                    <cbc:ChargeIndicator t-out="discount_foreach_vals.get('discount_charge_indicator')"/>
+                    <cbc:AllowanceChargeReasonCode t-out="discount_foreach_vals.get('discount_allowance_charge_reason_code')"/>
+                    <cbc:MultiplierFactorNumeric t-out="format_float(discount_foreach_vals.get('discount_percent'), 5)"/>
+                    <cbc:Amount t-att-currencyID="vals['currency'].name" t-out="format_float(discount_foreach_vals.get('discount_amount'), vals.get('currency_dp'))"/>
+                    <cbc:BaseAmount t-att-currencyID="vals['currency'].name" t-out="format_float(discount_foreach_vals.get('base_amount'), vals.get('currency_dp'))"/>
+                </cac:AllowanceCharge>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

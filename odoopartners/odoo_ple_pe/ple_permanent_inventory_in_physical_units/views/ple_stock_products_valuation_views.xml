@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="ple_stock_products_valuation_view_tree" model="ir.ui.view">
+        <field name="name">ple.stock.product.valuation.view.tree</field>
+        <field name="model">ple.stock.products.valuation</field>
+        <field name="arch" type="xml">
+            <tree string="Saldo inicial" editable="bottom">
+                <field name="product_id" invisible="1"/>
+                <field name="code_exist" invisible="1"/>
+                <field name="product_valuation"/>
+                <field name="quantity_product_hand"/>
+                <field name="udm_product"/>
+                <field name="standard_price"/>
+                <field name="total_value"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

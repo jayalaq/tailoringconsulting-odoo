@@ -1,0 +1,9 @@
+---Models in module 'country_view_import'---
+---Fields in module 'country_view_import'---
+---XML records in module 'country_view_import'---
+UPD ir.ui.view: country_view_import.view_country_tree_view_inherit_country_view_import -> country_view_import.res_country_view_tree_inherit_country_view_import
+----------------------------------------------------------------
+DEPENDS 
+model: base
+field:
+xml_id: base.view_country_tree

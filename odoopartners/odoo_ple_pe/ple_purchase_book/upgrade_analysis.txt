@@ -1,0 +1,132 @@
+---Models in module 'ple_purchase_book'---
+---Fields in module 'ple_purchase_book'---
+---XML records in module 'ple_purchase_book'---
+DEL account.tax: ple_purchase_book.automated_links
+DEL account.account.tag: ple_purchase_book.automated_links
+DEL account.journal: ple_purchase_book.automated_creation
+UPD ir.model.access: ple_purchase_book.access_ple_report_purchase_line_link_economic -> ple_purchase_book.access_link_economic
+UPD ir.model.access: ple_purchase_book.access_ple_report_purchase_line_type_rent -> ple_purchase_book.access_type_rent
+UPD ir.model.access: ple_purchase_book.access_ple_report_purchase_line_service_taken -> ple_purchase_book.access_service_taken
+UPD ir.model.access: ple_purchase_book.access_ple_report_purchase_exoneration_nodomicilied -> ple_purchase_book.access_exoneration_nodomicilied
+UPD ir.ui.view: ple_purchase_book.invoice_supplier_form_inherit -> ple_purchase_book.account_move_view_form_inherit_ple_purchase_book
+UPD ir.ui.view: ple_purchase_book.link_economic_form  -> ple_purchase_book.link_economic_view_form
+UPD ir.ui.view: ple_purchase_book.res_country_tree_view_inherit_ple_purchase_book -> ple_purchase_book.res_country_view_form_inherit_ple_purchase_book
+UPD ir.ui.view: ple_purchase_book.ple_report_purchase_tree_view -> ple_purchase_book.ple_report_purchase_view_tree
+UPD ir.ui.view: ple_purchase_book.ple_report_purchase_form_view -> ple_purchase_book.ple_report_purchase_view_form
+UPD ir.actions.act_window: ple_purchase_book.ple_report_purchase_action -> ple_purchase_book.action_ple_report_purchase
+----------------------------------------------------------------
+DEPENDS [ ple_sale_book ]
+model:  account_account
+field:  ple_date_account,
+        ple_state_account,
+        ple_selection
+xml_id:
+        account.view_account_form,
+        account.account_tag_view_search
+
+model:  account_journal
+field:  ple_journal_correlative,
+        ple_no_include
+xml_id:
+        account.view_account_journal_form
+
+model:  account_move_line
+field:  ple_correlative
+xml_id:
+
+model:  account_move
+field:  ple_state,
+        ple_its_declared,
+        ple_date,
+        bool_pay_invoice
+xml_id: 
+        account_origin_invoice.account_move_form_view_inherit_account_origin_invoice
+
+model:  ple_report_base
+field:  date_start,
+        state,
+        date_end,
+        company_id,
+        date_ple,
+        state_send,
+        xls_filename,
+        xls_binary,
+        txt_filename,
+        txt_binary,
+        error_dialog
+
+xml_id:
+
+model:  ple_report_sale
+field:  move_ids
+xml_id:
+
+model:  res_company
+field:  ple_type_contributor
+xml_id:
+        base.view_company_form
+
+model:  uom_uom
+field:  l10n_pe_edi_measure_unit_code
+xml_id:
+        uom.product_uom_form_view
+
+
+DEPENDS [ base_spot ]
+model:  
+field:
+xml_id:
+        base_spot.account_move_form_view_inherit_base_spot
+model:  account_move_line
+field:  voucher_payment_date,
+        voucher_number
+xml_id:
+
+model:  account_move
+field:  detraction_id,
+        retention_id,
+        voucher_payment_date,
+        voucher_number,
+        operation_type_detraction
+xml_id:
+
+model:  account_spot_detraction
+field:  code,
+        rate
+xml_id:
+
+DEPENDS [ document_in_supplier_invoice ]
+model:  l10n_latam_document_type
+field:  account_journal_id,
+        account_journal_id_sale
+xml_id:
+        account.view_move_form,
+        l10n_latam_invoice_document.view_document_type_form
+
+DEPENDS [ l10n_pe_catalog ]
+model:  model_sunat_catalog
+field:  name,
+        code,
+        description
+xml_id:
+
+model:  product_template
+field:  l10n_pe_charge_discount_id
+xml_id:
+
+model:  classification_services
+field:  code,
+        description
+xml_id:
+
+model:  payment_methods_codes
+field:  code,
+        description
+xml_id:
+
+model:  l10n_latam.identification.type
+field:  description
+xml_id:
+
+        
+        

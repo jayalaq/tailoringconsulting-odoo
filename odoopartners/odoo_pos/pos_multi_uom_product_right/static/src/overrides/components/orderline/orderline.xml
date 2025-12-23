@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_multi_uom_product_right.Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+        <xpath expr="//li[hasclass('price-per-unit')]" position="inside">
+            <t t-if='env.services.pos.config.allow_multi_uom'>
+                <t t-if="line.has_multi_uom">
+                    <span>  </span>
+                    <span class="uom-button" t-on-click="changeUomLine">
+                        <i class="fa fa-tachometer"/>
+                    </span>
+                </t> 
+            </t>
+        </xpath>
+    </t>
+</templates>

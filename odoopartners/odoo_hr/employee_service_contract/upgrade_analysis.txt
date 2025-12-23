@@ -1,0 +1,18 @@
+---Models in module 'employee_service_contract'---
+---Fields in module 'employee_service_contract'---
+---XML records in module 'employee_service_contract'---
+UPD ir.ui.view: employee_service_contract.view_employee_form_inherit_employee_service_contract  -> employee_service_contract.hr_employee_view_form_inherit_employee_service_contract
+UPD ir.cron: employee_service_contract.update_service_duration_hr_employee_cron  -> employee_service_contract.ir_cron_update_service_duration_employees
+----------------------------------------------------------------
+DEPENDS [ employee_service ]
+model:  hr_employee
+field:  contract_id,
+        service_start_date,
+        service_termination_date,
+xml_id: 
+    employee_service.hr_employee_view_form_inherit_employee_service_contract 
+
+DEPENDS [ hr_contract ]
+model: 
+field:
+xml_id: 

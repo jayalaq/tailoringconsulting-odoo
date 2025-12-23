@@ -1,0 +1,3 @@
+---Models in module 'related_product_to_customer'---
+---Fields in module 'related_product_to_customer'---
+---XML records in module 'related_product_to_customer'---

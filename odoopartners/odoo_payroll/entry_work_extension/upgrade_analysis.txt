@@ -1,0 +1,14 @@
+---Models in module 'setting_rules_payroll'---
+---Fields in module 'setting_rules_payroll'---
+---XML records in module setting_rules_payroll---
+----------------------------------------------------------------
+DEPENDS  [ hr_payroll ]
+model:
+field:
+xml_id: 
+
+DEPENDS  [ hr_work_entry_contract ]
+model: hr_work_entry_regeneration_wizard
+field:
+xml_id: 
+    hr_work_entry_contract.hr_work_entry_regeneration_wizard

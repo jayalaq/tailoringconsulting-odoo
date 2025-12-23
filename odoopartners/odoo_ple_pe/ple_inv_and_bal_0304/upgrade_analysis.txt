@@ -1,0 +1,23 @@
+
+---Models in module 'ple_inv_and_bal_0304'---
+---Fields in module 'ple_inv_and_bal_0304'---
+---XML records in module 'ple_inv_and_bal_0304'---
+UPD ir.ui.view: ple_inv_and_bal_0304.view_ple_inv_bal_inherit_0302_0304 --> ple_inv_and_bal_0304.ple_report_inv_bal_one_view_form_inherit_ple_inv_and_bal_0304
+UPD ir.ui.view: ple_inv_and_bal_0304.ple_report_inv_bal_04_tree_view --> ple_inv_and_bal_0304.ple_report_inv_bal_04_view_tree
+UPD ir.ui.view: ple_inv_and_bal_0304.ple_report_inv_bal_04_form_view --> ple_inv_and_bal_0304.ple_report_inv_bal_04_view_form
+----------------------------------------------------------------
+DEPENDS [ ple_sale_book ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ financial_statement_annexes ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ ple_inv_and_bal_0302 ]
+model:  
+field:
+xml_id:
+    ple_inv_and_bal_0302.ple_inv_and_bal_302_sale_form_view

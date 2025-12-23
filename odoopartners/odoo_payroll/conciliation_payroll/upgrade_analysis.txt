@@ -1,0 +1,8 @@
+---Models in module 'conciliation_payroll'---
+---Fields in module 'additional_fields_payroll'---
+---XML records in module 'additional_fields_payroll'---
+-------------------------------------------------------------
+DEPENDS [txt_bank_lo_pe]
+model:
+field:
+xml_id: hr_massive_payment_form_view

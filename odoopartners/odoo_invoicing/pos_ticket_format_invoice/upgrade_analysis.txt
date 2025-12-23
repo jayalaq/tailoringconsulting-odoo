@@ -1,0 +1,54 @@
+---Models in module 'pos_ticket_format_invoice'---
+---Fields in module 'pos_ticket_format_invoice'---
+---XML records in module 'pos_ticket_format_invoice'---
+UPD ir.ui.view: pos_ticket_format_invoice.view_account_journal_form_inherit_pos_ticket_format_invoice -> pos_ticket_format_invoice.account_journal_view_form_inherit_pos_ticket_format_invoice
+--------------------------------------------------------------------------------
+DEPENDS [ account ]
+model:  account_move
+field:  company_id,
+        invoice_date,
+        invoice_date_due,
+        invoice_payment_term_id,
+        invoice_user_id,
+        journal_id,
+        partner_id,
+        invoice_line_ids,
+        price_subtotal,
+        price_total,
+        display_type,
+        quantity,
+        name,
+        price_unit,
+        amount_untaxed,
+        tax_totals,
+        amount_total,
+        narration
+xml_id: 
+    account.view_account_journal_form
+
+DEPENDS [ l10n_latam_invoice_document ]
+model:  account_move
+field:  l10n_latam_document_type_id
+xml_id: 
+
+model:  l10n_latam_document_type
+field:  country_id,
+        name,
+        report_name
+xml_id: 
+
+DEPENDS [ print_aditional_comment ]
+model:  res_company
+field:  additional_information
+xml_id: 
+
+DEPENDS [ amount_to_text ]
+model: 
+field: 
+xml_id: 
+
+DEPENDS [ base_address_extended ]
+model:  res_city  
+field:  country_id,
+        state_id
+xml_id: 

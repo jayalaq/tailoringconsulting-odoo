@@ -1,0 +1,27 @@
+---Models in module 'invoice_type_document'---
+---Fields in module 'invoice_type_document'---
+---XML records in module 'invoice_type_document'---
+UPD ir.ui.view: invoice_type_document.account_move_line_tree_view_inherit_invoice_type_document  --> invoice_type_document.account_move_line_view_tree_inherit_invoice_type_document
+UPD ir.ui.view: invoice_type_document.account_move_form_view_inherit_invoice_type_doc   --> invoice_type_document.account_move_view_form_inherit_invoice_type_document
+----------------------------------------------------------------
+DEPENDS [ account ]
+model:  account_move_line
+field:  serie_correlative,
+        move_type,
+        serie_correlative_is_readonly,
+xml_id: 
+        account.view_move_line_tree
+
+model:  account_move
+field:  serie_correlative,
+xml_id: 
+        account.view_move_form
+
+model:  account_payment
+field: 
+xml_id: 
+
+DEPENDS [ l10n_latam_invoice_document ]
+model: 
+field:
+xml_id: 

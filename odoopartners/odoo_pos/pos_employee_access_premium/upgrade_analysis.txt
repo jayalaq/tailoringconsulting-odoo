@@ -1,0 +1,31 @@
+---Models in module 'pos_employee_access_premium'---
+---Fields in module 'pos_employee_access_premium'---
+pos_employee_access_premium      / hr.employee.base / pos_access_payment (boolean) -> pos_access_make_payments (boolean) : UPD
+pos_employee_access_premium      / hr.employee.base / pos_access_discount (boolean) -> pos_access_make_discounts (boolean) : UPD
+pos_employee_access_premium      / hr.employee.base / pos_access_price (boolean) -> pos_access_change_price (boolean) : UPD
+pos_employee_access_premium      / hr.employee.base / pos_access_delete_order (boolean) -> pos_access_delete_orders (boolean) : UPD
+pos_employee_access_premium      / hr.employee.base / pos_access_delete_orderline (boolean) -> pos_access_delete_order_lines (boolean) : UPD
+pos_employee_access_premium      / hr.employee.base / pos_access_decrease_quantity (boolean) -> pos_access_decrease_quantity_order_lines (boolean) : UPD
+pos_employee_access_premium      / hr.employee.base / pos_access_cash_in_out (boolean) : NEW
+pos_employee_access_premium      / hr.employee.base / pos_access_product_information (boolean) : NEW
+pos_employee_access_premium      / hr.employee.base / pos_access_make_refunds (boolean) : NEW
+pos_employee_access_premium      / res.users / pos_access_make_payments (boolean) : NEW (type: related:employe_id)
+pos_employee_access_premium      / res.users / pos_access_make_discounts (boolean) : NEW (type: related:employe_id)
+pos_employee_access_premium      / res.users / pos_access_change_price (boolean) : NEW (type: related:employe_id)
+pos_employee_access_premium      / res.users / pos_access_delete_orders (boolean) : NEW (type: related:employe_id)
+pos_employee_access_premium      / res.users / pos_access_delete_order_lines (boolean) : NEW (type: related:employe_id)
+pos_employee_access_premium      / res.users / pos_access_decrease_quantity_order_lines (boolean) : NEW (type: related:employe_id)
+pos_employee_access_premium      / res.users / pos_access_cash_in_out (boolean) : NEW (type: related:employe_id)
+pos_employee_access_premium      / res.users / pos_access_product_information (boolean) : NEW (type: related:employe_id)
+pos_employee_access_premium      / res.users / pos_access_make_refunds (boolean) : NEW (type: related:employe_id)
+pos_employee_access_premium      / res.users / pos_access_close (boolean) : NEW (type: related:employe_id)
+---XML records in module 'pos_employee_access_premium'---
+UPD ir.ui.view: pos_employee_access_premium.hr_employee_form_view_inherit_pos_user_access_mac5 -> pos_employee_access_premium.hr_employee_view_form_inherit_pos_employee_access_premium
+NEW ir.ui.view: pos_employee_access_premium.res_users_view_form_inherit_pos_employee_access_premium
+----------------------------------------------------------------
+DEPENDS
+module: hr
+field:
+xml_id: 
+    hr.view_employee_form
+    hr.res_users_view_form_profile

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_config_settings_view_form_inherit_intralot" model="ir.ui.view">
+        <field name="name">stock_config_settings_view_form_inherit_intralot</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='warehouse_setting_container']" position="inside">
+                <!-- Intralot Form Section -->
+                <setting id="intralot_config" help="Permite consultar el estado de la cuenta de Intralot">
+                    <field name="intralot"/>
+                    <div class="content-group" invisible="not intralot">
+                        <div class="mt8 d-flex flex-column gap-3">
+                            <div class="row" invisible="test_environment">
+                                <label for="url_provider_prod_intralot" class="col-4 col-lg-3"/>
+                                <field name="url_provider_prod_intralot" class="col-8 col-lg-9"/>
+                            </div>
+                            <div class="row" invisible="not test_environment">
+                                <label for="url_provider_test_intralot" class="col-4 col-lg-3"/>
+                                <field name="url_provider_test_intralot" class="col-8 col-lg-9"/>
+                            </div>
+                            <div class="row">
+                                <label for="dni_intralot" class="col-4 col-lg-3"/>
+                                <field name="dni_intralot" class="col-8 col-lg-9"/>
+                            </div>
+                            <div class="row">
+                                <label for="password_intralot" class="col-4 col-lg-3"/>
+                                <field name="password_intralot" password="True" class="col-8 col-lg-9"/>
+                            </div>
+                            <div class="row">
+                                <label for="name_intralot" class="col-4 col-lg-3"/>
+                                <field name="name_intralot" class="col-8 col-lg-9"/>
+                            </div>
+                            <div class="row">
+                                <label for="primary_last_name_intralot" class="col-4 col-lg-3"/>
+                                <field name="primary_last_name_intralot" class="col-8 col-lg-9"/>
+                            </div>
+                            <div class="row">
+                                <label for="second_last_name_intralot" class="col-4 col-lg-3"/>
+                                <field name="second_last_name_intralot" class="col-8 col-lg-9"/>
+                            </div>
+                            <div class="row">
+                                <label for="position_intralot" class="col-4 col-lg-3"/>
+                                <field name="position_intralot" class="col-8 col-lg-9"/>
+                            </div>
+                            <div class="row">
+                                <label for="email_intralot" class="col-4 col-lg-3"/>
+                                <field name="email_intralot" class="col-8 col-lg-9"/>
+                            </div>
+                            <div class="row">
+                                <label for="message_intralot" class="col-4 col-lg-3"/>
+                                <field name="message_intralot" class="col-8 col-lg-9"/>
+                            </div>
+                        </div>
+                    </div>
+                </setting>
+
+                <!-- Test Connection Section -->
+                <setting id="intralot_test_connection" help="Probar conexión con la API de Intralot" invisible="not intralot">
+                    <div class="content-group">
+                        <div class="mt8">
+                            <button name="action_api_intralot" type="object" string="Probar conexion" class="btn btn-primary"/>
+                            <div class="mt-3">
+                                <field name="test_environment"/>
+                                <label for="test_environment" string="Entorno Test"/>
+                                <div class="text-muted">
+                                    Este campo se debe activar cuando se requiera conectar a una Api de test
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

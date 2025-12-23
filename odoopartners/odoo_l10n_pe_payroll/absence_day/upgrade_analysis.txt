@@ -1,0 +1,5 @@
+---Models in module 'absence_day'---
+---Fields in module 'absence_day'---
+---XML records in module 'absence_day'---
+----------------------------------------------------------------
+DEPENDS

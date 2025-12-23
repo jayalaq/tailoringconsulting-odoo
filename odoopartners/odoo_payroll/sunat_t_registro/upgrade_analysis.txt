@@ -1,0 +1,21 @@
+---Models in module 'sunat_t_registro'---
+---Fields in module 'sunat_t_registro'---
+---XML records in module 'sunat_t_registro'---
+UPD ir.ui.view: sunat_t_registro.hr_contract_inherit_t_register -> sunat_t_registro.hr_contract_view_form_inherit_sunat_t_registro
+UPD ir.ui.view: sunat_t_registro.hr_employee_relative_extra_information_view_tree -> sunat_t_registro.hr_employee_relative_view_tree_inherit_sunat_t_registro
+UPD ir.ui.view: sunat_t_registro.hr_right_holders_view_form -> sunat_t_registro.hr_employee_right_holders_view_form
+UPD ir.ui.view: sunat_t_registro.hr_right_holders_view_tree -> sunat_t_registro.hr_employee_right_holders_view_tree
+UPD ir.ui.view: sunat_t_registro.res_config_settings_form_view_inherit_t_register -> sunat_t_registro.res_config_settings_form_view_inherit_sunat_t_registro
+UPD ir.ui.view: sunat_t_registro.view_res_country_extended_form_t_registro -> sunat_t_registro.res_country_view_form_inherit_sunat_t_registro
+----------------------------------------------------------------
+[ADD]
+
+DEPENDS [ types_system_pension ]
+model:  hr.employee
+field: cuspp 
+xml_id: hr_employee_view_form_inherit_types_system_pension
+
+DEPENDS [ various_data ]
+model:  hr.employee
+field: pension_sctr  
+xml_id:  hr_employee_form_view_inherit_various_data

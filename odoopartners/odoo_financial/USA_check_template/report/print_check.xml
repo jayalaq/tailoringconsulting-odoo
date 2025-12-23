@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="ckusa_check">
+            <div class="ckusa_check">
+                <t t-if="page['state'] == 'cancelled'">
+                    <div class="o-watermark">VOID</div>
+                </t>
+                <div class="sequence_number" t-if="page['sequence_number'] and page['manual_sequencing']" t-out="page['sequence_number']" />
+                <div class="ckusa_date" t-out="page['date']"/>
+                <div class="ckusa_payee_name" t-out="page['partner_name']"/>
+                <div class="ckusa_amount">
+                    <t t-out="page['amount'].replace(o.currency_id.symbol, '**')"/>
+                </div>
+                <div class="ckusa_amount_in_word" t-out="page['amount_in_word']"/>
+                <div class="ckusa_payee_addr" t-out="page['partner_id']" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+                <!--<div class="ckusa_memo" t-esc="'MEMO: {}'.format(page['memo']) if page['memo'] else 'MEMO:'"/>-->
+            </div>
+        </template>
+
+        <template id="ckusa_stub">
+            <div t-attf-class="ckusa_stub ckusa_stub_{{ stub_num }}">
+                <div class="row summary_line">
+                    <div class="col-xs-4 text-start">
+                        <span style="font-weight: bold;">
+                            <t t-out="page['date']"/>
+                        </span>
+                        <span style="font-weight: bold;">
+                            <t t-out="page['partner_name']"/>
+                        </span>
+                    </div>
+                </div>
+                <table class="table table-bordered table-sm stub_lines" style="border-color: #fff;">
+                    <tr style="border-color: #fff;">
+                        <th class="text-start" style="border-color: #fff;">Date</th>
+                        <th class="text-start" style="border-color: #fff;">Type</th>
+                        <th class="text-start" style="border-color: #fff;">Reference</th>
+                        <th class="text-end" style="border-color: #fff;">Original Amount</th>
+                        <th class="text-end" style="border-color: #fff;">Balance Due</th>
+                        <th class="text-end" style="border-color: #fff;">Payment</th>
+                    </tr>
+                    <t t-foreach="page['stub_lines']" t-as="stub_line">
+                        <t t-if="stub_line.get('header')">
+                            <tr style="border-color: #fff;">
+                                <th style="border-color: #fff;" colspan="6">
+                                    <t t-out="stub_line['name']"/>
+                                </th>
+                            </tr>
+                        </t>
+                        <t t-if="not stub_line.get('header')">
+                            <tr style="border-color: #fff;">
+                                <td class="text-start" style="border-color: #fff;">
+                                    <t t-if="stub_line['due_date']" t-out="stub_line['due_date']"/>
+                                </td>
+                                <td class="text-start" style="border-color: #fff;">
+                                    <t t-if="stub_line['type_bill']" t-out="stub_line['type_bill']"/>
+                                </td>
+                                <td class="text-start" style="border-color: #fff;">
+                                    <t t-if="stub_line['ref']" t-out="stub_line['ref']"/>
+                                </td>
+                                <td class="text-end" style="border-color: #fff;">
+                                    <t t-out="stub_line['amount_total']"/>
+                                </td>
+                                <td class="text-end" style="border-color: #fff;">
+                                    <t t-out="stub_line['amount_residual']"/>
+                                </td>
+                                <td class="text-end" style="border-color: #fff;">
+                                    <t t-out="stub_line['amount_paid']"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                    <tr t-if="page['stub_cropped']" style="border-color: #fff;">
+                        <td colspan="6" class="text-end" style="border-color: #fff;">...</td>
+                    </tr>
+                </table>
+                <table class="table" style="border-color: #fff;">
+                    <tr style="border-color: #fff;">
+                        <td style="border-color: #fff;">
+                            <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                        </td>
+                        <td style="border-color: #fff;">
+                            <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                        </td>
+                        <td style="border-color: #fff;">
+                            <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                        </td>
+                        <td style="border-color: #fff;" class="text-end">
+                            <span style="font-weight: bold;">Check Amount:</span>
+                        </td>
+                        <td style="border-color: #fff;">
+                            <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                        </td>
+                        <td style="border-color: #fff;" class="text-end">
+                            <span t-out="page['amount']"/>
+                        </td>
+                    </tr>
+                </table>
+                <table class="table" style="border-color: #fff; position: absolute; top: 3in;">
+                    <tr style="border-color: #fff;">
+                        <td style="border-color: #fff;" class="text-start">
+                            <span style="font-weight: bold;">Operating Account</span>
+                        </td>
+                        <td style="border-color: #fff;" class="text-end">
+                            <span t-out="page['amount']"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+---Models in module 'legal_benefits_rule'---
+---Fields in module 'legal_benefits_rule'---
+---XML records in module 'legal_benefits_rule'---
+----------------------------------------------------------------
+DEPENDS [ compensated_hours ]
+model:  
+field:  
+xml_id: 
+
+DEPENDS [ holiday_rule ]
+model:  
+field:  
+xml_id: 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ubl_21_InvoiceType_edocument" inherit_id="account_edi_ubl_cii.ubl_21_InvoiceType" primary="True">
+        <xpath expr="//*[local-name()='OrderReference']" position="after">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:DespatchDocumentReference t-att="vals.get('despatch_document_reference', {})">
+                    <cbc:ID t-out="vals.get('despatch_document_reference')"/>
+                    <cbc:DocumentTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Documento" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01" t-out="vals.get('despatch_document_reference_type_code')"/>
+                </cac:DespatchDocumentReference>
+                <cac:AdditionalDocumentReference t-att="vals.get('additional_document_reference', {})">
+                    <cbc:ID t-out="vals.get('additional_document_reference')"/>
+                    <cbc:DocumentTypeCode listAgencyName="PE:SUNAT" listName="Documento Relacionado" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo12" t-out="vals.get('additional_document_reference_type_code')"/>
+                </cac:AdditionalDocumentReference>
+            </t>
+        </xpath>
+        <xpath expr="//*[local-name()='TaxTotal']" position="before">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:AllowanceCharge t-att="vals.get('retention_invoice', {})">
+                    <cbc:ChargeIndicator t-out="vals.get('retention_invoice_charge_indicator')"/>
+                    <cbc:AllowanceChargeReasonCode t-out="vals.get('retention_invoice_allowance_charge_reason_code')"/>
+                    <cbc:MultiplierFactorNumeric t-out="vals.get('retention_invoice_multiplier_factor_numeric')"/>
+                    <cbc:Amount t-att-currencyID="vals['currency'].name" t-out="vals.get('retention_invoice_amount')"/>
+                    <cbc:BaseAmount t-att-currencyID="vals['currency'].name" t-out="vals.get('retention_invoice_base_amount')"/>
+                </cac:AllowanceCharge>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

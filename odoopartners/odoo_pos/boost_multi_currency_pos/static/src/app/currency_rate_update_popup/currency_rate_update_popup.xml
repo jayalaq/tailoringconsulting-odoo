@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <t t-name="boost_multi_currency_pos.CurrencyRateUpdatePopup">
+        <div class="popup popup-textinput rate_update">
+            <div class="modal-header">
+                <h4 class="modal-title"><t t-esc="props.title" /></h4>
+            </div>
+            <div class="modal-body">
+                <div class="popup_currency_info" style="font-size: 16px; font-weight: bold;">
+                    Current rate 1 <t t-esc="pos.company.currency_id[1]"/>
+                        =
+                        <t t-esc="props.currency.rate"/>
+                        <t t-esc="props.currency.name"/>
+                </div>
+                <div style="font-size: 16px;">
+                    <span id="conversion_rate">1 <t t-esc="pos.company.currency_id[1]"/>
+                        =
+                        <input placeholder="New Rate" id="new_rate" style="margin: 10px; width: 50%; line-height: 29px;" autocomplete="off"/>
+                        <t t-esc="props.currency.name"/>
+                    </span>
+                </div>            
+            </div>
+            <div class="footer footer-flex modal-footer">
+                <div class="button confirm highlight btn btn-lg btn-primary" t-on-click="_update_rate">
+                    Apply
+                </div>
+                <div class="button cancel btn btn-lg btn-secondary" t-on-click="cancel">
+                    <t t-esc="props.cancelText" />
+                </div>
+            </div>
+        </div>
+    </t>
+
+</odoo>

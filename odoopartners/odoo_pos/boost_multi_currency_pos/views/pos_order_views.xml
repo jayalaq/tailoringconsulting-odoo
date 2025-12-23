@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pos_order_form_view_inherit_boost_multi_currency_pos" model="ir.ui.view">
+        <field name="name">pos.order.form.view.inherit.boost_multi_currency_pos</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="order_currency_id"/>
+                <field name="amount_currency"/>
+            </field>
+            <field name="price_subtotal_incl" position="after">
+                <field name="line_amount_currency"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

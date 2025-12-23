@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_view_form_inherit_sunat_t_registro" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.sunat_t_registro</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='personal_information']/group/group[4]" position="inside">
+                <field name="sctr"/>
+                <field name="sctr_salud"/>
+            </xpath>
+            <xpath expr="//notebook/page[@name='personal_information']/group" position="inside">
+                <group string="Situación" name="situation">
+                    <group>
+                        <field name="situation"/>
+                    </group>
+                </group>
+                <group string="Rentas de 5ta categoría exoneradas" name="rent_category">
+                    <group>
+                        <field name="rent_category"/>
+                    </group>
+                </group>
+                <group string="Convenio para evitar la doble tributación" name="double_taxation">
+                    <group>
+                        <field name="double_taxation"/>
+                    </group>
+                </group>
+            </xpath>
+              <xpath expr="//notebook/page[@name='personal_information']/group/group[@name='health']" position="inside">
+                <field name="category_employee" invisible="1"/>
+                <field name="inv_eps" invisible="1"/>
+                <field name="eps_services_propios" invisible="inv_eps not in ['01', '03']"/>
+            </xpath>
+            <xpath expr="//field[@name='academic_degree_id']" position="after">
+                <field name="edu_bool" invisible="1"/>
+                <field name="edu_inst" invisible="edu_bool not in ['11', '13']"/>
+                <field name="edu_name_id" options="{'no_quick_create':True,'no_create_edit':True}"
+                    invisible="edu_inst not in ['si']"/>
+                <field name="edu_career_id" options="{'no_quick_create':True,'no_create_edit':True , 'no_create': True}"
+                    invisible="edu_inst not in ['si']"/>
+                <field name="edu_year_id" options="{'no_quick_create':True,'no_create_edit':True, 'no_create': True}"
+                       widget="selection" invisible="edu_inst not in ['si']"/>
+            </xpath>
+            <xpath expr="//field[@name='address_id']" position="after">
+                <field name="other_annexed_filter" invisible="1"/>
+                <field name="other_annexed" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_view_employee_form_private_address_t_registro" model="ir.ui.view">
+        <field name="name">view.employee.form.private.address.t.registro</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='work_contact_id']" position="replace">
+                <field name="work_contact_id"
+                       context="{'show_address': 1, 'default_type': 'private', 'form_view_ref': 'sunat_t_registro.res_partner_view_form_private_t_register'}"
+                       options='{"always_reload": True, "highlight_first_line": True}'/>
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_employee_view_form_inherit_view_custom" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.inherit.view_custom</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='identification_id']" position="after">
+              <field name="code_pas_country_id" invisible="code_pas_country_id == 'No se encontro el codigo de pais'"/>
+
+            </xpath>
+        </field>
+    </record>
+</odoo> 

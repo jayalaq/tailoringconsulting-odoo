@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_contract_view_form_inherit_sunat_t_registro" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherit.sunat_t_registro</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='hr_responsible_id']" position="after">
+                <field name="displacemnent"/>
+                <field name="employer_id" invisible = "displacemnent == False"/>
+                <field name="other_annexed_filter" invisible="1"/>
+                <field name="other_annexed"/>
+                <field name="date_from_displacement" invisible = "displacemnent == False"/>
+                <field name="date_to_displacement" invisible = "displacemnent == False"/>
+                <field name="risk_activities" invisible = "displacemnent == False"/>
+                <field name="given_service" invisible = "displacemnent == False"/>
+                <field name="worker_type_pensioner_provider"/>
+            </xpath>
+            <xpath expr="//field[@name='variable_payment_id']" position="after">
+                <field name="periodicity"/>
+            </xpath>
+            <xpath expr="//field[@name='structure_type_id']" position="after">
+                <field name="work_category"/>
+            </xpath>
+            <xpath expr="//field[@name='is_practitioner']" position="after">
+                <field name="type_formative_modality" invisible = "is_practitioner == False"/>
+                <field name="health_insurance_contract" invisible = "is_practitioner == False"/>
+                <field name="occupation_training_modality" invisible = "is_practitioner == False"/>
+                <field name="mother_responsability" invisible = "is_practitioner == False"/>
+                <field name="type_professional_center" invisible = "is_practitioner == False"/>
+            </xpath>
+        </field>
+    </record>
+</odoo> 

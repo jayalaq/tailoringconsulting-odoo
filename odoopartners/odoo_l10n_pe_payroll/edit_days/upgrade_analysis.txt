@@ -1,0 +1,9 @@
+---Models in module 'edit_days'---
+---Fields in module 'edit_days'---
+---XML records in module 'edit_days'---
+UPD ir.ui.view: edit_days.view_hr_payslip_form_inherit_edit_days -> edit_days.hr_payslip_view_form_inherit_edit_days
+----------------------------------------------------------------
+DEPENDS 
+model:hr_payroll
+field:
+xml_id: hr_payroll.view_hr_payslip_form

@@ -1,0 +1,9 @@
+---Models in module 'sbs_currency_update'---
+---Fields in module 'sbs_currency_update'---
+---XML records in module 'sbs_currency_update'---
+----------------------------------------------------------------
+DEPENDS [ account ]
+model:  res_currency
+field:  inherint-->res.currency
+
+

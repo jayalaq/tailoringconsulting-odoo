@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_analytic_line_view_search_inherit_extra_hours" model="ir.ui.view">
+        <field name="name">account.analytic.line.search.inherit.extra_hours</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_search"/>
+        <field name="arch" type="xml">
+            <!-- check account_analytic_line.py - get_views() definition -->
+            <xpath expr="//filter[@name='month']" position="before">
+                <filter name="extra_hours" invisible="true"/>
+                <filter name="non_extra_hours" invisible="true"/>
+                <separator invisible="true"/>
+                <filter name="non_validated_extra_hours" invisible="true"/>
+                <filter name="validated_extra_hours" invisible="true"/>
+                <separator invisible="true"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="account_analytic_line_view_form_inherit_extra_hours" model="ir.ui.view">
+        <field name="name">account.analytic.line.view.form.inherit.extra_hours</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_form"/>
+        <field name="arch" type="xml">
+            <field name="project_id" position="after">
+                <field name="employee_id"/>
+            </field>
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page string="Cálculos">
+                        <group colspan="3" col="6">
+                            <field name="extra_hours"/>
+                            <field name="hours_compensate"/>
+                            <field name="extra_hours_morning"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="extra_hour_25"/>
+                                <field name="extra_hour_35"/>
+                                <field name="r_extra_hour_25"/>
+                                <field name="r_extra_hour_35"/>
+                                <field name="hour_100"/>
+                            </group>
+                            <group>
+                                <field name="night_hours"/>
+                                <field name="r_hours_compensate"
+                                       invisible="hours_compensate == 0"/>
+                                <field name="pay_date"/>
+                            </group>
+                        </group>
+                        <field name="error_dialog" class="infobox"
+                               invisible="error_dialog in ['',False]"/>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="account_analytic_line_view_tree_inherit_extra_hours" model="ir.ui.view">
+        <field name="name">account.analytic.line.view.tree.inherit.extra_hours</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="/tree" position="attributes">
+                <attribute name="decoration-bf">is_validate_extra_hour == False</attribute>
+            </xpath>
+            <field name="project_id" position="after">
+                <field name="employee_id"/>
+            </field>
+            <field name="task_id" position="after">
+                <field name="fl_from" widget="float_time"/>
+                <field name="fl_to" widget="float_time"/>
+                <field name="extra_hours"/>
+                <field name="hours_compensate"/>
+                <field name="extra_hours_morning"/>
+                <field name="extra_hour_25"/>
+                <field name="extra_hour_35"/>
+                <field name="r_extra_hour_25"/>
+                <field name="r_extra_hour_35"/>
+                <field name="hour_100"/>
+                <field name="r_hours_compensate"/>
+                <field name="night_hours"/>
+                <field name="pay_date"/>
+                <field name="is_validate_extra_hour" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="overtime_analysis_menu_action" model="ir.actions.act_window">
+        <field name="name">Análisis de Horas extras</field>
+        <field name="res_model">account.analytic.line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="domain">['|', '|', ('extra_hours', '=', True), ('hours_compensate', '=', True),
+            ('extra_hours_morning', '=', True)]
+        </field>
+    </record>
+
+    <record id="extra_hours_menu_action" model="ir.actions.act_window">
+        <field name="name">Horas extras</field>
+        <field name="res_model">account.analytic.line</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('extra_hours', '=', True)]
+        </field>
+        <field name="context">{
+            'search_default_groupby_employee':1,
+            'search_default_groupby_project':1,
+            }
+        </field>
+    </record>
+
+    <record id="account_analytic_line_tree_action" model="ir.actions.act_window.view">
+        <field name="view_mode">tree</field>
+        <field name="sequence" eval="9"/>
+        <field name="view_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+        <field name="act_window_id" ref="extra_hours_menu_action"/>
+    </record>
+
+    <record id="account_analytic_line_form_action" model="ir.actions.act_window.view">
+        <field name="view_mode">form</field>
+        <field name="sequence" eval="10"/>
+        <field name="view_id" ref="hr_timesheet.hr_timesheet_line_form"/>
+        <field name="act_window_id" ref="extra_hours_menu_action"/>
+    </record>
+
+    <record id="validate_extra_hours_action" model="ir.actions.server">
+        <field name="name">Validar Horas extra</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="analytic.model_account_analytic_line"/>
+        <field name="binding_model_id" ref="analytic.model_account_analytic_line"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+            action = records.action_validate_extra_hours()
+        </field>
+    </record>
+
+    <menuitem id="account_analytic_line_inherit_overtime_analysis_menu"
+              name="Análisis de Horas extras"
+              parent="hr_timesheet.menu_timesheets_reports"
+              action="overtime_analysis_menu_action"
+    />
+
+
+    <menuitem id="timesheet_menu_activity_mine"
+              name="Horas extras"
+              parent="hr_timesheet.timesheet_menu_root"
+              action="extra_hours_menu_action"
+              sequence="6"
+    />
+
+</odoo>

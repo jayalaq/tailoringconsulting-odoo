@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_employee_third_staff_view_tree" model="ir.ui.view">
+        <field name="name">hr.employee.third.staff.view.tree</field>
+        <field name="model">hr.employee.third.staff</field>
+        <field name="arch" type="xml">
+            <tree string="Employee third" editable="bottom">
+                <field name="name"/>
+                <field name="contact_id"/>
+                <field name="type_identification_id"/>
+                <field name="document_country_id"/>
+                <field name="identification_id"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="sctr"/>
+                <field name="registered_t_register"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

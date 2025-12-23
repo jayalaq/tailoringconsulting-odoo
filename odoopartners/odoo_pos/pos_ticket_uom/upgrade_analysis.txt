@@ -1,0 +1,5 @@
+---Fields in module 'pos_ticket_uom'---
+---XML records in module 'pos_ticket_uom'---
+--------------------------------------------------------------------------------
+DEPENDS [ pos_ticket_format_invoice ]
+        

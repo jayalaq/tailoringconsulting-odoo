@@ -1,0 +1,52 @@
+---Models in module 'payment_conditions'---
+payment_conditions   / hr.contract              / schedule_pay_conditions (Many2one)           : previously name schedule_pay
+payment_conditions   / hr.payroll.structure.type        / default_schedule_pay_conditions (Many2one)           : previously name field default_schedule_pay
+payment_conditions   / hr.payroll.structure         / schedule_pay_conditions (Many2one)           : previously name field schedule_pay
+---Fields in module 'payment_conditions'---
+---XML records in module 'payment_conditions'---
+UPD ir.ui.view: payment_conditions.hr_contract_form_inherit_payment_condition -> payment_conditions.hr_contract_view_form_inherit_payment_condition
+UPD ir.ui.view: payment_conditions.hr_payroll_structure_type_tree_inherit_payment_condition -> payment_conditions.hr_payroll_structure_type_view_tree_inherit_payment_condition
+UPD ir.ui.view: payment_conditions.hr_payroll_structure_type_form_inherit_payment_condition -> payment_conditions.hr_payroll_structure_type_view_form_inherit_payment_condition
+UPD ir.ui.view: payment_conditions.hr_payroll_structure_form_inherit_payment_condition -> payment_conditions.hr_payroll_structure_view_form_inherit_payment_condition
+----------------------------------------------------------------
+DEPENDS [ hr_payroll ]
+model:  hr_contract
+field:  special_situation_id,
+        payment_type_id,
+        variable_payment_id,
+        schedule_pay_conditions
+xml_id: 
+    hr_payroll.hr_contract_form_inherit
+    hr_payroll.hr_payroll_structure_type_view_tree
+    hr_payroll.hr_payroll_structure_type_view_form
+    hr_payroll.view_hr_employee_grade_form
+
+model: hr_payroll_structure_type
+field:  default_schedule_pay_conditions
+xml_id: 
+    hr_payroll.hr_contract_form_inherit
+    hr_payroll.hr_payroll_structure_type_view_tree
+    hr_payroll.hr_payroll_structure_type_view_form
+    hr_payroll.view_hr_employee_grade_form
+
+model:  hr_payroll_structure
+field:  schedule_pay_conditions
+xml_id: 
+    hr_payroll.hr_contract_form_inherit
+    hr_payroll.hr_payroll_structure_type_view_tree
+    hr_payroll.hr_payroll_structure_type_view_form
+    hr_payroll.view_hr_employee_grade_form
+
+DEPENDS [ localization_menu ]
+model:  account_spot_detraction
+field:  name
+xml_id: 
+    
+model:  account_spot_retention
+field:  name
+xml_id: 
+    
+model:  code_aduana
+field:  name,
+        code
+xml_id: 

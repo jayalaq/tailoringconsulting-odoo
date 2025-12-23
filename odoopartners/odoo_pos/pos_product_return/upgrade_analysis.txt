@@ -1,0 +1,5 @@
+---Models in module 'pos_product_return'---
+---Fields in module 'pos_product_return'---
+---XML records in module 'pos_product_return'---
+----------------------------------------------------------------
+DEPENDS

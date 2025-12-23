@@ -1,0 +1,9 @@
+---Models in module 'hr_payslip'---
+---Fields in module 'hr_payslip'---
+---XML records in module 'hr_payslip'---
+ADD ir.ui.view:            hr_payslip_view_form_inherit_automatic_functions_rule
+----------------------------------------------------------------
+DEPENDS [hr_payroll]
+model:
+field:
+xml_id: 

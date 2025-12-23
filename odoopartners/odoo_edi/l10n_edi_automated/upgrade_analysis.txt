@@ -1,0 +1,13 @@
+---Models in module 'l10n_edi_automated'---
+---Fields in module 'l10n_edi_automated'---
+---XML records in module 'l10n_edi_automated'---
+----------------------------------------------------------------
+DEPENDS [ account_edi ]
+model:account_journal
+field:
+xml_id: account.view_account_journal_form
+
+DEPENDS [ l10n_latam_invoice_document ]
+model:
+field:
+xml_id: 

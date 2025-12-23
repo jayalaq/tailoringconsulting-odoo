@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cl_edi_factoring
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-22 14:47+0000\n"
+"PO-Revision-Date: 2023-04-22 10:48-0400\n"
+"Last-Translator: Nelson Ramírez <nramirez@konos.cl>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_bank_statement_line__l10n_cl_aec_file
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_move__l10n_cl_aec_file
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_payment__l10n_cl_aec_file
+msgid "AEC file"
+msgstr "Archivo AEC"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields.selection,name:l10n_cl_edi_factoring.selection__account_move__l10n_cl_dte_cession_status__accepted
+msgid "Accepted"
+msgstr "Aceptado"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields.selection,name:l10n_cl_edi_factoring.selection__account_move__l10n_cl_dte_cession_status__ask_for_status
+msgid "Ask For Status"
+msgstr "Preguntar por el estado"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model,name:l10n_cl_edi_factoring.model_ir_attachment
+msgid "Attachment"
+msgstr "Adjunto"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_bank_statement_line__cession_number
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_move__cession_number
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_payment__cession_number
+msgid "Cession Number"
+msgstr "Número de Cesión"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_bank_statement_line__cession_partner_id
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_move__cession_partner_id
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_payment__cession_partner_id
+msgid "Cession Partner"
+msgstr "Cesionario"
+
+#. module: l10n_cl_edi_factoring
+#: model_terms:ir.ui.view,arch_db:l10n_cl_edi_factoring.view_cesion_invoice_form
+msgid "Create Cession"
+msgstr "Crear Cesión"
+
+#. module: l10n_cl_edi_factoring
+#. odoo-python
+#: code:addons/l10n_cl_edi_factoring/models/.ipynb_checkpoints/account_move-checkpoint.py:0
+#: code:addons/l10n_cl_edi_factoring/models/account_move.py:0
+#, python-format
+msgid "DTE Cession has been sent to SII with response TRACKID: %s."
+msgstr "DTE Cesión ha sido enviado a SII con respuesta TRACKID: %s."
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_bank_statement_line__sworn_declaration
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_move__sworn_declaration
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_payment__sworn_declaration
+msgid "Declaración Jurada"
+msgstr ""
+
+#. module: l10n_cl_edi_factoring
+#: model_terms:ir.ui.view,arch_db:l10n_cl_edi_factoring.view_cesion_invoice_form
+msgid "Document Cession"
+msgstr "Documento de Cesión"
+
+#. module: l10n_cl_edi_factoring
+#. odoo-python
+#: code:addons/l10n_cl_edi_factoring/models/.ipynb_checkpoints/account_move-checkpoint.py:0
+#: code:addons/l10n_cl_edi_factoring/models/account_move.py:0
+#, python-format
+msgid "Error: %s. No response from SII, Try again."
+msgstr "Error: %s. No hay respuesta del SII, inténtelo de nuevo."
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model,name:l10n_cl_edi_factoring.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields.selection,name:l10n_cl_edi_factoring.selection__account_move__l10n_cl_dte_cession_status__not_sent
+msgid "Pending To Be Sent"
+msgstr "Pendiente de enviar"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields.selection,name:l10n_cl_edi_factoring.selection__account_move__l10n_cl_dte_cession_status__rejected
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_bank_statement_line__l10n_cl_dte_cession_status
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_move__l10n_cl_dte_cession_status
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_payment__l10n_cl_dte_cession_status
+msgid "SII DTE Cession status"
+msgstr "SII DTE Estado de cesión"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model,name:l10n_cl_edi_factoring.model_l10n_cl_certificate
+msgid "SII Digital Signature"
+msgstr "Firma Digital SII"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_bank_statement_line__sii_cesion_message
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_move__sii_cesion_message
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_payment__sii_cesion_message
+msgid "SII Message"
+msgstr "Mensaje SII"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_bank_statement_line__sii_xml_dte
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_move__sii_xml_dte
+#: model:ir.model.fields,field_description:l10n_cl_edi_factoring.field_account_payment__sii_xml_dte
+msgid "SII XML DTE"
+msgstr "SII XML DTE"
+
+#. module: l10n_cl_edi_factoring
+#: model:ir.model.fields,help:l10n_cl_edi_factoring.field_account_bank_statement_line__l10n_cl_dte_cession_status
+#: model:ir.model.fields,help:l10n_cl_edi_factoring.field_account_move__l10n_cl_dte_cession_status
+#: model:ir.model.fields,help:l10n_cl_edi_factoring.field_account_payment__l10n_cl_dte_cession_status
+msgid ""
+"Status of sending the DTE to the SII:\n"
+"    - Not sent: the DTE has not been sent to SII but it has created.\n"
+"    - Ask For Status: The DTE is asking for its status to the SII.\n"
+"    - Accepted: The DTE has been accepted by SII.\n"
+"    - Rejected: The DTE has been rejected by SII."
+msgstr ""

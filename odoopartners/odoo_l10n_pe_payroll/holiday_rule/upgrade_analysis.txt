@@ -1,0 +1,18 @@
+---Models in module 'Holiday_rules'---
+---Fields in module 'Holiday_rules'---
+---XML records in module 'Holiday_rules'---
+----------------------------------------------------------------
+DEPENDS [ basic_rule ]
+model:  
+field:  
+xml_id: 
+
+DEPENDS [ holiday_process ]
+model:  
+field:  
+xml_id: 
+
+DEPENDS [ absence_day ]
+model:  
+field:  
+xml_id: 

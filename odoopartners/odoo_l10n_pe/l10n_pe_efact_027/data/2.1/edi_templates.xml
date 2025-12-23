@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<odoo>
+
+    <template id="ubl_20_CommonLineType_inherit_l10n_pe_efact_027" inherit_id="account_edi_ubl_cii.ubl_20_CommonLineType">
+        <xpath expr="//*[local-name()='PricingReference']" position="after">
+            <t t-set="vals_efact" t-value="vals.get('delivery_vals', {})"/>
+            <t t-if="vals_efact['origin_address'] and vals_efact['destiny_address'] and vals_efact['service_detail']">
+                <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                   xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                    <cac:Delivery>
+                        <cac:Despatch>
+                            <cbc:Instructions t-out="vals_efact.get('service_detail')"/>
+                            <cac:DespatchAddress>
+                                <cbc:ID t-out="vals_efact.get('origin_address').l10n_pe_district.code" />
+                                <cac:AddressLine>
+                                    <cbc:Line
+                                        t-out="str(vals_efact.get('origin_address').street + ', ' + vals_efact.get('origin_address').l10n_pe_district.name + ', ' + vals_efact.get('origin_address').city_id.name + ', ' + vals_efact.get('origin_address').state_id.name + ', ' + vals_efact.get('origin_address').country_id.name)[:200]"/>
+                                </cac:AddressLine>
+                            </cac:DespatchAddress>
+                        </cac:Despatch>
+                    </cac:Delivery>
+                    <cac:Delivery>
+                        <cac:DeliveryTerms>
+                            <cbc:ID>01</cbc:ID>
+                            <cbc:Amount currencyID="PEN" t-out="vals_efact.get('transportation_service')"/>
+                        </cac:DeliveryTerms>
+                    </cac:Delivery>
+                    <cac:Delivery>
+                        <cac:DeliveryTerms>
+                            <cbc:ID>02</cbc:ID>
+                            <cbc:Amount currencyID="PEN" t-out="vals_efact.get('effective_load')"/>
+                        </cac:DeliveryTerms>
+                    </cac:Delivery>
+                    <cac:Delivery>
+                        <cac:DeliveryTerms>
+                            <cbc:ID>03</cbc:ID>
+                            <cbc:Amount currencyID="PEN" t-out="vals_efact.get('on_nominal_payload')"/>
+                        </cac:DeliveryTerms>
+                    </cac:Delivery>
+                    <cac:Delivery>
+                        <cac:DeliveryLocation>
+                            <cac:Address>
+                                <cbc:ID t-out="vals_efact.get('destiny_address').l10n_pe_district.code"/>
+                                <cac:AddressLine>
+                                    <cbc:Line
+                                            t-out="str(vals_efact.get('destiny_address').street + ', ' + vals_efact.get('destiny_address').l10n_pe_district.name + ', ' + vals_efact.get('destiny_address').city_id.name + ', ' + vals_efact.get('destiny_address').state_id.name + ', ' + vals_efact.get('destiny_address').country_id.name)[:200]"/>
+                                </cac:AddressLine>
+                            </cac:Address>
+                        </cac:DeliveryLocation>
+                    </cac:Delivery>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

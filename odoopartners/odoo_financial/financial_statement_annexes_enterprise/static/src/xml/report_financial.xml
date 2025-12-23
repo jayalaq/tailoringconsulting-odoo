@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="account_reports.AccountReportLineNameCustomizable" t-inherit="account_reports.AccountReportLineNameCustomizable" t-inherit-mode="extension">
+        <xpath expr="//t[@t-key='caretOption_index']/DropdownItem" position="after">
+            <t t-if="AnnexesAndNotes">
+                <DropdownItem onSelected="() => this.openWizardFinancial()">
+                    Notas y Anexos (excel)
+                </DropdownItem>
+            </t>
+            
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="boost_multi_currency_pos.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        <xpath expr="//OrderWidget" position="replace">
+            <t t-if="props.data.curr_receipt_mode">
+                <OrderWidget lines="props.data.orderlines" t-slot-scope="scope">
+                    <t t-set="line" t-value="scope.line"/>
+                    <li class="orderline p-2 lh-sm cursor-pointer" t-attf-class="{{ line.comboParent ? 'border-start border-3 ms-4' : '' }}" t-att-class="props.class">
+                        <div class="d-flex justify-content-between">
+                            <div class="product-name d-inline-block flex-grow-1 fw-bolder pe-1 text-truncate">
+                                <span class="text-wrap" t-esc="line.productName"/>
+                                <t t-slot="product-name"/>
+                            </div>
+                            <div class="product-price d-inline-block text-end price fw-bolder">
+                                <t 
+                                    t-esc="format_foreign(
+                                        convert_currency(
+                                            props.data.order_currency_id, 
+                                            line.price
+                                        ), 
+                                        props.data.dict_curr_list[props.data.order_currency_id]
+                                    )" 
+                                />
+                            </div>
+                        </div>
+                        <ul class="info-list ms-2">
+                            <li class="price-per-unit">
+                                <em t-esc="line.qty" class="qty fst-normal fw-bolder me-1" /> <t t-if="line.unit" t-esc="line.unit" /> 
+                                <t t-if="line.price !== 0">
+                                    x <s 
+                                        t-if="line.oldUnitPrice"
+                                        t-esc="format_foreign(
+                                            convert_currency(
+                                                props.data.order_currency_id, 
+                                                line.oldUnitPrice
+                                            ), 
+                                            props.data.dict_curr_list[props.data.order_currency_id]
+                                        )" 
+                                        />
+                                    <t 
+                                        t-esc="format_foreign(
+                                            convert_currency(
+                                                props.data.order_currency_id, 
+                                                line.unitPrice
+                                            ), 
+                                            props.data.dict_curr_list[props.data.order_currency_id]
+                                        )" 
+                                    /> <span t-if="line.unit"> / <t t-esc="line.unit" /></span>
+                                </t>
+                            </li>
+                            <li t-if="line.price !== 0 and line.discount and line.discount !== '0'">
+                                With a <em><t t-esc="line.discount" />% </em> discount
+                            </li>
+                            <t t-slot="default" />
+                            <li t-if="line.customerNote" class="customer-note w-100 p-2 my-1 rounded text-break">
+                                <i class="fa fa-sticky-note me-1" role="img" aria-label="Customer Note" title="Customer Note"/>
+                                <t t-esc="line.customerNote" />
+                            </li>
+                            <ul t-if="line.pack_lot_lines">
+                                <li t-foreach="line.pack_lot_lines" t-as="lot" t-key="lot.cid">
+                                    <t t-if="lot.order_line.product.tracking == 'lot'">
+                                        Lot Number <t t-esc="lot.lot_name"/>
+                                    </t>
+                                    <t t-else="">
+                                        SN <t t-esc="lot.lot_name"/>
+                                    </t>
+                                </li>
+                            </ul>
+                        </ul>
+                    </li>
+                </OrderWidget>
+            </t>
+            <t t-else="">
+                <OrderWidget lines="props.data.orderlines" t-slot-scope="scope">
+                    <t t-set="line" t-value="scope.line"/>
+                    <Orderline line="omit(scope.line, 'customerNote')" class="{ 'pe-none': true }">
+                        <li t-if="line.customerNote" class="customer-note w-100 p-2 my-1 rounded text-break">
+                            <i class="fa fa-sticky-note me-1" role="img" aria-label="Customer Note" title="Customer Note"/>
+                            <t t-esc="line.customerNote" />
+                        </li>
+                        <ul t-if="line.pack_lot_lines">
+                            <li t-foreach="line.pack_lot_lines" t-as="lot" t-key="lot.cid">
+                                <t t-if="lot.order_line.product.tracking == 'lot'">
+                                    Lot Number <t t-esc="lot.lot_name"/>
+                                </t>
+                                <t t-else="">
+                                    SN <t t-esc="lot.lot_name"/>
+                                </t>
+                            </li>
+                        </ul>
+                    </Orderline>
+                </OrderWidget>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('pos-receipt-amount')]//span" position="replace">
+            <t t-if="props.data.curr_receipt_mode">
+                <span 
+                    t-esc="format_foreign(
+                        convert_currency(
+                            props.data.order_currency_id, 
+                            props.data.amount_total
+                        ), 
+                        props.data.dict_curr_list[props.data.order_currency_id]
+                    )" 
+                    class="pos-receipt-right-align"
+                />
+            </t>
+            <t t-else="">
+                <span t-esc="props.formatCurrency(props.data.amount_total)" class="pos-receipt-right-align"/>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-if='props.data.rounding_applied']//div[1]//span[1]" position="replace">
+            <t t-if="props.data.curr_receipt_mode">
+                <span 
+                    t-esc="format_foreign(
+                        convert_currency(
+                            props.data.order_currency_id, 
+                            props.data.rounding_applied
+                        ), 
+                        props.data.dict_curr_list[props.data.order_currency_id]
+                    )" 
+                    class="pos-receipt-right-align"
+                />
+            </t>
+            <t t-else="">
+                <span t-esc='props.formatCurrency(props.data.rounding_applied)' class="pos-receipt-right-align"/>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-if='props.data.rounding_applied']//div[2]//span[1]" position="replace">
+            <t t-if="props.data.curr_receipt_mode">
+                <span 
+                    t-esc="format_foreign(
+                        convert_currency(
+                            props.data.order_currency_id, 
+                            props.data.amount_total + props.data.rounding_applied
+                        ), 
+                        props.data.dict_curr_list[props.data.order_currency_id]
+                    )" 
+                    class="pos-receipt-right-align"
+                />
+            </t>
+            <t t-else="">
+                <span t-esc='props.formatCurrency(props.data.amount_total + props.data.rounding_applied)' class="pos-receipt-right-align"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('paymentlines')]//span" position="replace">
+            <t t-if="props.data.curr_receipt_mode">
+                <span 
+                    t-esc="format_foreign(
+                        convert_currency(
+                            props.data.order_currency_id, 
+                            line.amount
+                        ), 
+                        props.data.dict_curr_list[props.data.order_currency_id]
+                    )" 
+                    class="pos-receipt-right-align"
+                />
+            </t>
+            <t t-else="">
+                <span t-esc="props.formatCurrency(line.amount, false)" class="pos-receipt-right-align"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('receipt-change')]//span" position="replace">
+            <t t-if="props.data.curr_receipt_mode">
+                <span 
+                    t-esc="format_foreign(
+                        convert_currency(
+                            props.data.order_currency_id, 
+                            props.data.change
+                        ), 
+                        props.data.dict_curr_list[props.data.order_currency_id]
+                    )" 
+                    class="pos-receipt-right-align"
+                />
+            </t>
+            <t t-else="">
+                <span t-esc="props.formatCurrency(props.data.change)" class="pos-receipt-right-align"/>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-if='props.data.total_discount']//span" position="replace">
+            <t t-if="props.data.curr_receipt_mode">
+                <span 
+                    t-esc="format_foreign(
+                        convert_currency(
+                            props.data.order_currency_id, 
+                            props.data.total_discount
+                        ), 
+                        props.data.dict_curr_list[props.data.order_currency_id]
+                    )" 
+                    class="pos-receipt-right-align"
+                />
+            </t>
+            <t t-else="">
+                <span t-esc="props.formatCurrency(props.data.total_discount)" class="pos-receipt-right-align"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('pos-receipt-taxes')]" position="replace">
+            <t t-if="props.data.curr_receipt_mode">
+                <div t-if="props.data.tax_details.length > 0" class="pos-receipt-taxes">
+                    <span />
+                    <span>Tax</span>
+                    <span>Amount</span>
+                    <span>Base</span>
+                    <span>Total</span>
+                    <t t-foreach="props.data.tax_details" t-as="tax" t-key="tax.tax.id">
+                        <span t-esc="tax.tax.letter || ''"/>
+                        <span t-if="tax.tax.amount_type != 'fixed'"><t t-esc="tax.tax.amount"/>%</span>
+                        <span t-else="" t-esc="tax.tax.name"/>
+                        <span 
+                            t-esc="format_foreign(
+                                convert_currency(
+                                    props.data.order_currency_id, 
+                                    tax.amount
+                                ), 
+                                props.data.dict_curr_list[props.data.order_currency_id]
+                            )" 
+                            class="pos-receipt-right-align"
+                        />
+                        <span 
+                            t-esc="format_foreign(
+                                convert_currency(
+                                    props.data.order_currency_id, 
+                                    tax.base
+                                ), 
+                                props.data.dict_curr_list[props.data.order_currency_id]
+                            )" 
+                            class="pos-receipt-right-align"
+                        />
+                        <span 
+                            t-esc="format_foreign(
+                                convert_currency(
+                                    props.data.order_currency_id, 
+                                    tax.amount + tax.base
+                                ), 
+                                props.data.dict_curr_list[props.data.order_currency_id]
+                            )" 
+                            class="pos-receipt-right-align"
+                        />
+                    </t>
+                    <t t-if="props.data.tax_details.length > 1">
+                        <span />
+                        <span />
+                        <span 
+                            t-esc="format_foreign(
+                                convert_currency(
+                                    props.data.order_currency_id, 
+                                    props.data.amount_tax
+                                ), 
+                                props.data.dict_curr_list[props.data.order_currency_id]
+                            )" 
+                            class="pos-receipt-right-align"
+                        />
+                        <span 
+                            t-esc="format_foreign(
+                                convert_currency(
+                                    props.data.order_currency_id, 
+                                    props.data.total_without_tax
+                                ), 
+                                props.data.dict_curr_list[props.data.order_currency_id]
+                            )" 
+                            class="pos-receipt-right-align"
+                        />
+                        <span 
+                            t-esc="format_foreign(
+                                convert_currency(
+                                    props.data.order_currency_id, 
+                                    props.data.amount_total
+                                ), 
+                                props.data.dict_curr_list[props.data.order_currency_id]
+                            )" 
+                            class="pos-receipt-right-align"
+                        />
+                    </t>
+                </div>
+            </t>
+            <t t-else="">
+                <div t-if="props.data.tax_details.length > 0" class="pos-receipt-taxes">
+                    <span />
+                    <span>Tax</span>
+                    <span>Amount</span>
+                    <span>Base</span>
+                    <span>Total</span>
+                    <t t-foreach="props.data.tax_details" t-as="tax" t-key="tax.tax.id">
+                        <span t-esc="tax.tax.letter || ''"/>
+                        <span t-if="tax.tax.amount_type != 'fixed'"><t t-esc="tax.tax.amount"/>%</span>
+                        <span t-else="" t-esc="tax.tax.name"/>
+                        <span t-esc="props.formatCurrency(tax.amount, false)" />
+                        <span t-esc="props.formatCurrency(tax.base, false)" />
+                        <span t-esc="props.formatCurrency(tax.amount + tax.base, false)" />
+                    </t>
+                    <t t-if="props.data.tax_details.length > 1">
+                        <span />
+                        <span />
+                        <span t-esc="props.formatCurrency(props.data.amount_tax, false)" />
+                        <span t-esc="props.formatCurrency(props.data.total_without_tax, false)" />
+                        <span t-esc="props.formatCurrency(props.data.amount_total, false)" />
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

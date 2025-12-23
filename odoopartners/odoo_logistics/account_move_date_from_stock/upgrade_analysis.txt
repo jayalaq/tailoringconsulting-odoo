@@ -1,0 +1,19 @@
+---Models in module 'account_move_date_from_stock'---
+---Fields in module 'account_move_date_from_stock'---
+---XML records in module 'account_move_date_from_stock'---
+UPD ir.ui.view: account_move_date_from_stock.stock_valuation_layer_form_view_inherit_account_move_date_from_stock -> account_move_date_from_stock.stock_valuation_layer_view_form_inherit_account_move_date_from_stock
+UPD ir.ui.view: account_move_date_from_stock.stock_valuation_layer_tree_view_inherit_account_move_date_from_stock -> account_move_date_from_stock.stock_valuation_layer_view_tree_inherit_account_move_date_from_stock
+----------------------------------------------------------------
+DEPENDS [ change_stock_movement_date ]
+model:  stock_move
+
+model:  stock_valuation_layer
+
+field:  accounting_date
+xml_id: stock_account.stock_valuation_layer_form,
+        stock_account.stock_valuation_layer_tree
+
+DEPENDS [ purchase_stock ]
+model:  
+field:  
+xml_id: 

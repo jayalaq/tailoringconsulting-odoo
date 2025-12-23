@@ -1,0 +1,16 @@
+[submodule "OCA/server-ux"]
+	url = https://github.com/OCA/server-ux.git
+	path = OCA/server-ux
+	branch = refs/heads/17.0
+[submodule "OCA/bank-payment"]
+	url = https://github.com/OCA/bank-payment.git
+	path = OCA/bank-payment
+	branch = refs/heads/17.0
+[submodule "OCA/account-reconcile"]
+	url = https://github.com/OCA/account-reconcile.git
+	path = OCA/account-reconcile
+	branch = refs/heads/17.0
+[submodule "OCA/stock-logistics-workflow"]
+	url = https://github.com/OCA/stock-logistics-workflow.git
+	path = OCA/stock-logistics-workflow
+	branch = refs/heads/17.0

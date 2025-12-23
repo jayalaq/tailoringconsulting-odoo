@@ -1,0 +1,10 @@
+---Models in module 'print_aditional_comment'---
+---Fields in module 'print_aditional_comment'---
+---XML records in module 'print_aditional_comment'---
+UPD ir.ui.view: print_aditional_comment.res_company_form_view_inherit_print_aditional_comment -> print_aditional_comment.res_company_view_form_inherit_print_aditional_comment
+--------------------------------------------------------------------------------
+DEPENDS 
+module: base
+field:
+xml_id: 
+    base.view_company_form 

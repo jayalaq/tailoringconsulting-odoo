@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+     <template id="external_layout_contract_formats">
+        <div class="article doc_report_layout_standard" t-att-data-oe-model="doc and doc._name"
+             t-att-data-oe-id="doc and doc.id"
+             t-att-data-oe-lang="doc and doc.env.context.get('lang')">
+            <t t-call="web.address_layout"/>
+            <t t-out="0"/>
+        </div>
+    </template>
+
+
+    <template id="template_report_hr_contract">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="contract_formats.external_layout_contract_formats">
+                    <t t-if="o.contract_template_id">
+                        <span t-out="o.get_render_template_contract()"/>
+                        <p style="page-break-before:always;"/>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+    
+</odoo>

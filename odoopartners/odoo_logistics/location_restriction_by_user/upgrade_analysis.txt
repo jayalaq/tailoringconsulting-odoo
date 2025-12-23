@@ -1,0 +1,14 @@
+---Models in module 'location_restriction_by_user'---
+---Fields in module 'location_restriction_by_user'---
+    se agregó el campo usser_logger para que se encargue de asignar los dominios sobre picking_type_id y location_id
+---XML records in module 'location_restriction_by_user'---
+    Se agregó el campo user_logger encima del picking_type_id
+
+    Se cambió la función 'fields_view_get' por '_get_view'
+
+Nota:
+    Se modificó el método _compute_location_id debido a que este setea por defecto algunos valores en el form los cuales no se
+    encuentran en el dominio de los usuarios asignados.
+
+    Se modifcó el método _default_picking_type_id debido al valor que calcula por defecto para el campo picking_type_id, este valor 
+    no se ajusta a la lógica de filtros que se requiere para el módulo

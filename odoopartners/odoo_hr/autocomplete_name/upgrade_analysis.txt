@@ -1,0 +1,8 @@
+---Models in module 'autocomplete_name'---
+---Fields in module 'autocomplete_name'---
+---XML records in module 'autocomplete_name'---
+----------------------------------------------------------------
+DEPENDS [personal_information]
+model: hr.employee
+field: firstname
+xml_id: hr_employee_view_form_inherit_personal_information

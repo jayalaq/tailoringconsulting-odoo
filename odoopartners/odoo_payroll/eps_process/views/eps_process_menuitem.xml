@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_action_eps_root"
+              name="EPS"
+              parent="localization_menu.menu_hr_localization_datos_nomina"
+    />
+
+    <menuitem id="menu_action_eps_credit"
+              name="Crédito EPS"
+              parent="eps_process.menu_action_eps_root"
+              action="action_eps_credit"
+    />
+
+    <menuitem id="menu_action_eps_management"
+              name="Gestión EPS"
+              parent="eps_process.menu_action_eps_root"
+              action="action_eps_management"
+    />
+</odoo>

@@ -1,0 +1,4 @@
+---Models in module 'holiday_process'---
+---Fields in module 'holiday_process'---
+---XML records in module 'holiday_process'---
+Change parent menu_hr_holidays_approvals to menu_hr_holidays_management 

@@ -1,0 +1,25 @@
+---Models in module 'ple_inv_and_bal_0301'---
+---Fields in module 'ple_inv_and_bal_0301'---
+---XML records in module 'ple_inv_and_bal_0301'---
+UPD ir.ui.view: ple_inv_and_bal_0301.account_account_form_view_inherit_ple_inv_and_bal_0301 --> ple_inv_and_bal_0301.account_account_view_form_inherit_ple_inv_and_bal_0301
+UPD ir.ui.view: ple_inv_and_bal_0301.account_move_form_view_inherit_ple_inv_and_bal_0301 --> ple_inv_and_bal_0301.account_move_view_form_inherit_ple_inv_and_bal_0301
+UPD ir.ui.view: ple_inv_and_bal_0301.account_move_line_tree_view_inherit_ple_inv_and_bal_0301_one --> ple_inv_and_bal_0301.account_move_line_view_tree_inherit_ple_inv_and_bal_0301_one
+UPD ir.ui.view: ple_inv_and_bal_0301.account_move_line_tree_view_inherit_ple_inv_and_bal_0301_two --> ple_inv_and_bal_0301.account_move_line_view_tree_inherit_ple_inv_and_bal_0301_two
+UPD ir.ui.view: ple_inv_and_bal_0301.eeff_ple_form_view --> ple_inv_and_bal_0301.eeff_ple_view_form
+UPD ir.ui.view: ple_inv_and_bal_0301.eeff_ple_tree_view --> ple_inv_and_bal_0301.eeff_ple_view_tree
+UPD ir.ui.view: ple_inv_and_bal_0301.eeff_ple_search_view --> ple_inv_and_bal_0301.eeff_ple_view_search
+UPD ir.ui.view: ple_inv_and_bal_0301.ple_inv_bal_line_initial_balances_form_view --> ple_inv_and_bal_0301.ple_inv_bal_line_initial_balances_view_form
+UPD ir.ui.view: ple_inv_and_bal_0301.ple_inv_bal_line_initial_balances_tree_view --> ple_inv_and_bal_0301.ple_inv_bal_line_initial_balances_view_tree
+UPD ir.ui.view: ple_inv_and_bal_0301.ple_inv_and_bal_301_sale_form_view --> ple_inv_and_bal_0301.ple_report_inv_bal_view_form
+UPD ir.ui.view: ple_inv_and_bal_0301.ple_report_inv_bal_tree_view --> ple_inv_and_bal_0301.ple_report_inv_bal_view_tree
+---Reports in the t-field="company.partner_id.name"---
+----------------------------------------------------------------
+DEPENDS [ ple_sale_book ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ l10n_pe_catalog ]
+model:  
+field:
+xml_id:

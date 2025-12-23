@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_users_view_form_inherit_pos_employee_access_premium" model="ir.ui.view">
+        <field name="name">res.users.view.form.inherit.pos_employee_access_premium</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr.res_users_view_form_profile"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='identification_group']" position="after">
+                <group string="Accesses Point of Sale" groups="hr.group_hr_user" name="pos_employee_access_group">
+                    <field name="pos_access_close" string="Close POS" readonly="not can_edit"/>
+                    <field name="pos_access_make_payments" string="Make Payments" readonly="not can_edit"/>
+                    <field name="pos_access_make_refunds" string="Make Refunds" readonly="not can_edit"/>
+                    <field name="pos_access_make_discounts" string="Make Discounts" readonly="not can_edit"/>
+                    <field name="pos_access_change_price" string="Change Price" readonly="not can_edit"/>
+                    <field name="pos_access_delete_orders" string="Delete Orders" readonly="not can_edit"/>
+                    <field name="pos_access_delete_order_lines" string="Delete Order Lines" readonly="not can_edit"/>
+                    <field name="pos_access_decrease_quantity_order_lines" string="Decrease Quantity Order Lines" readonly="not can_edit"/>
+                    <field name="pos_access_cash_in_out" string="Cash In/Out" readonly="not can_edit"/>
+                    <field name="pos_access_product_information" string="Product Information" readonly="not can_edit"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

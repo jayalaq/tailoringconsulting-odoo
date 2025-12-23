@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="ple_report_inv_bal_seventeen_action" model="ir.actions.act_window">
+        <field name="name">3.17 Balance de Comprobación</field>
+        <field name="res_model">ple.report.inv.bal.seventeen</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_ple_inv_bal_3_17"
+              name="3.17 Balance de Comprobación"
+              parent="ple_sale_book.menu_ple_inv_bal"
+              action="ple_report_inv_bal_seventeen_action"
+              sequence="36"
+    />
+    
+</odoo>

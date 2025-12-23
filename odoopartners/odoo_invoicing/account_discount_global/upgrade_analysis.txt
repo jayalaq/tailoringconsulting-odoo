@@ -1,0 +1,4 @@
+---Models in module 'account_discount_global'---
+---Fields in module 'account_discount_global'---
+---XML records in module 'account_discount_global'---
+----------------------------------------------------------------

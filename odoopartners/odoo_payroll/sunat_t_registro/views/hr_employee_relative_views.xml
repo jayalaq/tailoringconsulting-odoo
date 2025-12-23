@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_relative_view_tree_inherit_sunat_t_registro" model="ir.ui.view">
+        <field name="name">hr.employee.relative.view.tree.inherit.sunat_t_registro</field>
+        <field name="model">hr.employee.relative</field>
+        <field name="inherit_id" ref="personal_information.hr_employee_relative_view_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='relation_id']" position="after">
+                <field name="first_lastname" optional="hidden"/>
+                <field name="second_lastname" optional="hidden"/>
+            </xpath>
+
+            <xpath expr="//field[@name='disability']" position="after">
+                <field name="right_holder"/>
+                <button name="action_button_right_holder" string="Agregar" type="object" invisible = "right_holder == False"/>
+            </xpath>
+
+            <xpath expr="//field[@name='max_age']" position="after">
+                <field name="identification_id" optional="hidden"/>
+                <field name="type_identification_id" optional="hidden"/>
+                <field name="document_country_id" optional="hidden" />
+                <field name="high_date" invisible = "right_holder == False" optional="hidden"/>
+                <field name="low_date" invisible = "right_holder == False" optional="hidden"/>
+                <field name="reason_leave" invisible = "low_date == False or right_holder == False" optional="hidden"/>
+                <field name="relation_type" optional="hidden"/>
+                <field name="month_pregnant" invisible = "low_date != '04' or right_holder == False" optional="hidden"/>
+                <field name="doc_acreditation" optional="hidden"/>
+                <field name="n_doc_acred" invisible = "doc_acreditation == False" optional="hidden"/>
+                <field name="address_home_id" optional="hidden"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

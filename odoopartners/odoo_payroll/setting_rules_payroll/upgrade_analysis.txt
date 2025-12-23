@@ -1,0 +1,9 @@
+---Models in module 'setting_rules_payroll'---
+---Fields in module 'setting_rules_payroll'---
+---XML records in module setting_rules_payroll---
+UPD ir.ui.view: setting_rules_payroll.hr_salary_rule_form_view_inherit_setting_rules_payroll -> setting_rules_payroll.hr_salary_rule_view_form_inherit_setting_rules_payroll
+----------------------------------------------------------------
+DEPENDS 
+model:hr_payroll
+field:
+xml_id: hr_payroll.hr_salary_rule_form

@@ -1,0 +1,35 @@
+---Models in module 'automatic_leave_type'---
+---Fields in module 'automatic_leave_type'---
+---XML records in module 'automatic_leave_type'---
+----------------------------------------------------------------
+DEPENDS [ hr_payroll ]
+model:  
+field:  
+xml_id: 
+
+DEPENDS [ hr_work_entry ]
+model:  
+field:  
+xml_id: hr_work_entry.hr_work_entry_type_view_form
+
+DEPENDS [ project_timesheet_holidays ]
+model:  hr_leave_type
+field:  timesheet_project_id,
+        timesheet_task_id
+xml_id: 
+
+DEPENDS [ hr_work_entry_holidays ]
+model:  hr_work_entry_type
+field:  is_calc_own_rule
+xml_id: 
+
+model:  hr_leave_type
+field:  work_entry_type_id
+xml_id: 
+
+DEPENDS [ absence_manager ]
+model:  hr_work_entry_type
+field:  name
+xml_id: 
+
+    

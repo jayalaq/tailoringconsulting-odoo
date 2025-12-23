@@ -1,0 +1,17 @@
+---Models in module 'change_stock_movement_date'---
+---Fields in module 'change_stock_movement_date'---
+---XML records in module 'change_stock_movement_date'---
+UPD ir.ui.view: change_stock_movement_date.stock_picking_form_view_inherit_change_stock_movement_date -> change_stock_movement_date.stock_picking_view_form_inherit_change_stock_movement_date
+----------------------------------------------------------------
+DEPENDS [ stock ]
+model:  stock_move
+field:  
+xml_id: 
+
+model:  stock_move_line
+field:  
+xml_id: 
+
+model:  stock_picking
+field:  date_done
+xml_id: stock.view_picking_form

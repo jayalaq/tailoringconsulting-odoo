@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pos_order_view_form_inherit_serie_and_correlative_pos" model="ir.ui.view">
+        <field name="name">pos.order.view.form.inherit.serie_and_correlative_pos</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="autocreate_pos_invoice.pos_order_view_form_inherit_autocreate_pos_invoice"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='l10n_latam_journal_id']" position="before">
+                <field name="l10n_latam_document_type_id" readonly="state != 'draft'"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

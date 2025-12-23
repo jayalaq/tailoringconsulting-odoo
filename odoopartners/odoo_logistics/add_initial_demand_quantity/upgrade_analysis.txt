@@ -1,0 +1,16 @@
+---Models in module 'add_initial_demand_quantity'---
+---Fields in module 'add_initial_demand_quantity'---
+---XML records in module 'add_initial_demand_quantity'---
+----------------------------------------------------------------
+DEPENDS [  ]
+model:  
+
+model:  
+
+field:  
+xml_id: 
+
+DEPENDS [ purchase_stock ]
+model:  
+field:  
+xml_id: 

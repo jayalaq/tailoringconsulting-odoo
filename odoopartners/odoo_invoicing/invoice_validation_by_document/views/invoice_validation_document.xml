@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="l10n_latam_identification_type_view_form_inherit_invoice_validation_document" model="ir.ui.view">
+        <field name="name">l10n_latam.identification.view.form.inherit.invoice_validation_document</field>
+        <field name="model">l10n_latam.identification.type</field>
+        <field name="inherit_id" ref="document_type_validation.l10n_latam_identification_type_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='doc_length']" position="before">
+                <field name="invoice_validation_document" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form_inherit_serie_and_correlative_pos" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.serie_and_correlative_pos</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="autocreate_pos_invoice.res_config_settings_view_form_inherit_autocreate_pos_invoice"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='pos_always_move_account']" position="after">
+                <setting string="Document Types" id="serie_and_correlative_pos">
+                    <div class="content-group mt16">
+                        <div class="row">
+                            <label string="Invoices" for="pos_invoice_l10n_latam_document_type_ids" class="col-lg-3 o_light_label"/>
+                            <field name="pos_invoice_l10n_latam_document_type_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('active', '=', True)]"/>
+                        </div>
+                        <div class="row">
+                            <label string="Tickets" for="pos_ticket_l10n_latam_document_type_ids" class="col-lg-3 o_light_label"/>
+                            <field name="pos_ticket_l10n_latam_document_type_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('active', '=', True)]"/>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

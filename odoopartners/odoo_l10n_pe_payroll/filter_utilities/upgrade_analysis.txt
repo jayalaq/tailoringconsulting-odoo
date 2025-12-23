@@ -1,0 +1,20 @@
+---Models in module 'filter_utilities'---
+---Fields in module 'filter_utilities'---
+---XML records in module 'filter_utilities'---
+UPD ir.ui.view: filter_utilities.inherited_hr_attendance_view_filter_cts_grati  --> filter_utilitieshr_attendance_view_search_inherit_filter_utilities
+UPD ir.ui.view: filter_utilities.hr_attendance_tree_view_inherit_filter_utilities  --> filter_utilities.hr_attendance_view_tree_inherit_filter_utilities 
+UPD ir.ui.view: filter_utilities.view_hr_holidays_filter_inherit_utilities  --> filter_utilities.hr_leave_view_search_inherit_filter_utilities 
+UPD ir.ui.view: filter_utilities.hr_leave_view_tree_view_inherit_filter_utilities --> filter_utilities.hr_leave_view_tree_inherit_filter_utilities 
+UPD ir.ui.view: filter_utilities.view_hr_payslip_line_filter_inherit_utilities --> filter_utilities.hr_payslip_line_view_search_inherit_filter_utilities 
+UPD ir.ui.view: filter_utilities.hr_payslip_line_tree_view_inherit_filter_utilities --> filter_utilities.hr_payslip_line_view_tree_inherit_filter_utilities 
+UPD ir.ui.view: filter_utilities.view_hr_payslip_worked_days_filter_inherit_utilities  --> filter_utilities.hr_payslip_worked_days_view_search_inherit_filter_utilities
+----------------------------------------------------------------
+DEPENDS [ absence_manager ]
+model:  
+field:  
+xml_id: 
+
+DEPENDS [ payroll_utilities ]
+model:  
+field:  
+xml_id: 

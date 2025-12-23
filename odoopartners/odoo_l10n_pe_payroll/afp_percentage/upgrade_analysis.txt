@@ -1,0 +1,12 @@
+---Models in module 'afp_percentage'---
+---Fields in module 'afp_percentage'---
+---XML records in module 'afp_percentage'---
+UPD ir.ui.view: afp_percentage.pension_system_view_list_inherit -> afp_percentage.pension_system_view_tree_inherit_afp_percentage
+UPD ir.ui.view: afp_percentage.pension_system_view_form_inherit -> afp_percentage.pension_system_view_form_inherit_afp_percentage
+----------------------------------------------------------------
+DEPENDS [types_system_pension]
+model:  pension.system
+field:
+xml_id:
+    pension_system_view_form
+    pension_system_view_tree

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="stock_move_view_form_inherit_ple_permant_inventory_in_physical_units" model="ir.ui.view">
+        <field name="name">stock.move.view.form.inherit.ple_permant_inventory_in_physical_units</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_form"/>
+        <field name="arch" type="xml">
+            <group name="linked_group" position="after">
+                <newline>
+                <group name="stock_valuation" string="Stock Valuation">
+                    <field name="product_qty"/>
+                    <field name="stock_valuation_layer_ids"/>
+                    <field name="move_line_ids"/>
+                </group>
+                </newline>
+            </group>
+        </field>
+    </record>
+
+</odoo>

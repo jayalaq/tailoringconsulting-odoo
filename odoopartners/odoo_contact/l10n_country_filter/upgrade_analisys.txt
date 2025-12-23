@@ -1,0 +1,5 @@
+---Models in module 'l10n_country_filter'---
+---Fields in module 'l10n_country_filter'---
+---XML records in module 'l10n_country_filter'---
+----------------------------------------------------------------
+DEPENDS 

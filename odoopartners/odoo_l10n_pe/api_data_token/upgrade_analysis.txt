@@ -1,0 +1,8 @@
+---Models in module 'api_data_token'---
+---Fields in module 'api_data_token'---
+---XML records in module 'api_data_token'---
+-----------------------------------------------------------------------------
+DEPENDS
+model: base_setup
+field:
+xml_id: base_setup.res_config_settings_view_form

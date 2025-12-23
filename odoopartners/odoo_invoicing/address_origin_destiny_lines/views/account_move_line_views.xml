@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_move_line_view_tree_inherit_address_origin_destiny_lines" model="ir.ui.view">
+        <field name="name">account.move.line.view.tree.inherit.address_origin_destiny_lines</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']//tree/field[@name='price_subtotal']" position="after">
+                <field name="origin_address" optional="hide"/>
+                <field name="destiny_address" optional="hide"/>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']/tree/field[@name='account_id']" position="after">
+                <field name="origin_address" optional="hide"/>
+                <field name="destiny_address" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

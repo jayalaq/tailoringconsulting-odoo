@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--FINAL INDEX UPDATED-->
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+        .nav-tabs li .active {
+            background-color: #bb89aa;
+            color: #fff !important;
+        }
+
+        .accordion .card-body {
+            background-color: #f0f4f7;
+        }
+
+        .accordion .fa {
+            margin-right: 0.5rem;
+        }
+
+        .accordion button,
+        .accordion button:hover,
+        .accordion button:focus {
+            text-decoration: none;
+        }
+
+        .card-header:after {
+            content: "\2212";
+            color: #000;
+            font-weight: bold;
+            float: left;
+            margin-right: 13px;
+            margin-left: 0px;
+            font-size: 18px;
+        }
+
+        .collapsed:after {
+            content: '\002B';
+        }
+    </style>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="d-flex align-items-center justify-content-between"
+         style="border-bottom: 1px solid #875A7B; padding: 15px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <div style="color: #25a4df; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; background-color: white; display: inline-block; padding: 3px 10px; border-radius: 50px;"
+                    class="mr-2">
+                    <img src="./assets/ganemo-logo.png" width="auto" height="auto" style="width:30%;" class="img-responsive">
+            </div>
+            <div style="color: #25a4df; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; background-color: white; display: inline-block; padding: 3px 10px; border-radius: 50px;"
+                    class="mr-2">
+                <i class="fa fa-check mr-1"></i>Community (Ganemo Online o Ganemo.SH)
+            </div>
+            <div style="color: #875A7B; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; background-color: white; display: inline-block; padding: 3px 10px; border-radius: 50px;"
+                    class="mr-2">
+                <i class="fa fa-check mr-1"></i>Enterprise (Odoo.SH, Odoo Online, Ganemo Online o Ganemo.SH)
+            </div>
+
+        </div>
+    </div>
+    <!-- GIFBANNER -->
+    <div class="container" style="width:84vw">
+        <!--Slide-->
+        <div class="row" style="padding: 4rem 2.5rem 0 !important; background-color: #fff !important;">
+            <div class="col-lg-12 d-flex flex-column align-items-center">
+                <h1 class="text-center text-uppercase"
+                    style="font-family: Montserrat, 'sans-serif' !important; font-size: 67px !important; color: #5154a5; font-weight: 900 !important;">
+                    <span style="color:#9451a5;">Odoo Premium Support Request</span>
+                </h1>
+                <p class="my-1 text-center text-uppercase"
+                    style="letter-spacing: 4px !important; color: #74788D !important;font-size: 21px;font-weight: bold;">
+                    It helps you create support tickets to Ganemo from your own Odoo using whatsapp</p>
+            </div>
+            <div class="col-lg-12 d-flex flex-column justify-content-center">
+                <p class="my-1 text-center"
+                    style="font-family: Montserrat, 'sans-serif' !important; color: #212121 !important;font-size: 16px;font-weight: bolder;">
+                    Ganemo Premium support by whatsapp
+                </p>
+            </div>
+
+            <div class="col-md-12 text-center ">
+                <a href="mailto:leads@ganemo.co" target="_blank"
+                    style="background-color:#3c6dac; border-radius:35px; font-family:Montserrat; display:inline-block; padding:7px 33px; border:1px solid #3c6dac"
+                    class="mx-1 mb-2 deep-1 deep_hover">
+                    <img class="img" style="width:30px" src="assets/icons/emailus.png">
+                    <span class="pl-2" style="color:#fff; font-size:16px; vertical-align:middle">Email Us</span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=51946377197" target="_blank"
+                    style="background-color:#549c33; font-family:Montserrat; display:inline-block; padding:7px 33px; border:1px solid #549c33; border-radius:35px"
+                    class="mx-1 mb-2 deep-1 deep_hover">
+                    <img class="img" style="width:27px" src="assets/icons/whatsappus.png">
+                    <span class="pl-2" style="color:#fff; font-size:16px; vertical-align:middle">whatsapp Us</span>
+                </a>
+                <a href="https://www.ganemo.co/appointment/5" target="_blank"
+                    style="background-color:#714B67; font-family:Montserrat; display:inline-block; padding:7px 33px; border:1px solid #549c33; border-radius:35px"
+                    class="mx-1 mb-2 deep-1 deep_hover">
+                    <img class="img" style="width:27px" src="assets/icons/meet264.png">
+                    <span class="pl-2" style="color:#fff; font-size:16px; vertical-align:middle">Schedule DEMO</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-12 d-flex justify-content-center align-items-center" style="margin:2rem 0">
+            <img src="assets/screenshots/gifbanner.gif" width="100%" height="auto" class="img-responsive">
+        </div>
+        <!-- END OF slide -->
+
+        <!--Highlights-->
+        <section class="oe_container pb-5">
+            <div class="mt64 mb64">
+                <h2 class="text-center text-uppercase"
+                    style="font-family: Montserrat, 'sans-serif' !important; font-size: 50px !important; color:#5154a5; font-weight: 900 !important;">
+                    <span style="color:#3c6dac;">KEY FEATURES</span>
+                </h2>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 mt32">
+                        <div class="container shadow d-flex align-items-center justify-content-center"
+                            style="border-radius: 5px;padding: 33px 0px;min-height: 180px; margin: 15px auto;">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center" style="float:left">
+                                <img class="img img-responsive" src="assets/icons/Check64.png">
+                            </div>
+                            <div class="col-md-9" style="padding-left:0; float:left; width:70%">
+                                <h3 class="mt16 mb0"
+                                    style="font-family:Roboto; font-weight:500; font-size:22px; color: #9451a5;">
+                                    Create Support Request Easily</h3>
+                                <p class=" mt8 mb-0" style="font-family:Roboto ; color: #25002e; margin-bottom: 0px;">
+                                     Create support request easily from systray.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 mt32">
+                        <div class="container shadow d-flex align-items-center justify-content-center"
+                            style="border-radius: 5px;padding: 33px 0px;min-height: 180px; margin: 15px auto;">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center" style="float:left">
+                                <img class="img img-responsive" src="assets/icons/Check64.png">
+                            </div>
+                            <div class="col-md-9" style="padding-left:0; float:left; width:70%">
+                                <h3 class="mt16 mb0"
+                                    style="font-family:Roboto; font-weight:500; font-size:22px; color: #9451a5;">
+                                    Support Through WhatsApp</h3>
+                                <p class=" mt8 mb-0" style="font-family:Roboto ; color: #25002e; margin-bottom: 0px;">
+                                    Send your request through WhatsApp </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End of Highlights-->
+
+        <!--Overview-->
+        <section class="oe_container pb-5">
+            <div class="mt64 mb64">
+
+                <div class="col-lg-12 d-flex flex-column align-items-center">
+                    <h1 class="text-center text-uppercase"
+                        style="font-family:Montserrat, 'sans-serif' !important; font-size:40px !important; color:#791d97; font-weight:900 !important">
+                        <span style="color:#3c6dac">Overview</span>
+                        <sup>
+                        </sup>
+                    </h1>
+                    <p class="my-1 text-center text-uppercase"
+                        style="letter-spacing:4px !important; color:#74788D !important">
+                        GANEMO SUPPORT REQUEST</p>
+                </div>
+
+                <div class="col-sm-12 py-4">
+                    <h5 style="text-indent: 0em; text-align: justify;">
+                    This module makes it easy for you to create support requests for Ganemo via WhatsApp, directly from the Odoo tray.
+                    </h5>
+                </div>
+            </div>
+        </section>
+        <!--End of Overview-->
+
+    </div>
+    
+    <!-- New section -->
+    <div class="container" style="width:84vw">
+        <section>
+
+            <div class="d-flex align-items-center" style="border-bottom:2px solid #714B67; padding:15px 0px">
+                <div class="d-flex justify-content-center align-items-center mr-2"
+                    style="background-color:#F5F5F5; border-radius:0px; width:64px; height:64px">
+                    <img src="assets/icons/ourservices64.gif">
+                </div>
+                <h2 class="mt-2" style="text-indent: 1em; font-family:'Montserrat', sans-serif; font-size:24px; font-weight:bold">
+                    Our Exclusive Services
+                </h2>
+            </div>
+
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center my-4">
+                        <div class="d-flex justify-content-center align-items-center mx-3 my-3"
+                            style="background-color:#fff !important; border-radius:15px !important; height:80px; width:80px">
+                            <img src="assets/icons/yellowCheck64.png"
+                                class="img-responsive" height="48px" width="48px">
+                        </div>
+                        <h6 class="text-center"
+                            style="font-family:Montserrat, 'sans-serif' !important; font-weight:bold">
+                            Odoo Implementation</h6>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center my-4">
+                        <div class="d-flex justify-content-center align-items-center mx-3 my-3"
+                            style="background-color:#fff !important; border-radius:15px !important; height:80px; width:80px">
+                            <img src="assets/icons/yellowCheck64.png"
+                                class="img-responsive" height="48px" width="48px">
+                        </div>
+                        <h6 class="text-center"
+                            style="font-family:Montserrat, 'sans-serif' !important; font-weight:bold">
+                            Odoo Developer</h6>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center my-4">
+                        <div class="d-flex justify-content-center align-items-center mx-3 my-3"
+                            style="background-color:#fff !important; border-radius:15px !important; height:80px; width:80px">
+                            <img src="assets/icons/yellowCheck64.png"
+                                class="img-responsive" height="48px" width="48px">
+                        </div>
+                        <h6 class="text-center"
+                            style="font-family:Montserrat, 'sans-serif' !important; font-weight:bold">
+                            Odoo Upgrade</h6>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center my-4">
+                        <div class="d-flex justify-content-center align-items-center mx-3 my-3"
+                            style="background-color:#fff !important; border-radius:15px !important; height:80px; width:80px">
+                            <img src="assets/icons/yellowCheck64.png"
+                                class="img-responsive" height="48px" width="48px">
+                        </div>
+                        <h6 class="text-center"
+                            style="font-family:Montserrat, 'sans-serif' !important; font-weight:bold">
+                            Module Migration</h6>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center my-4">
+                        <div class="d-flex justify-content-center align-items-center mx-3 my-3"
+                            style="background-color:#fff  !important; border-radius:15px !important; height:80px; width:80px">
+                            <img src="assets/icons/yellowCheck64.png"
+                                class="img-responsive" height="48px" width="48px">
+                        </div>
+                        <h6 class="text-center"
+                            style="font-family:Montserrat, 'sans-serif' !important; font-weight:bold">
+                            Odoo Integration</h6>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center my-4">
+                        <div class="d-flex justify-content-center align-items-center mx-3 my-3"
+                            style="background-color:#fff !important; border-radius:15px !important; height:80px; width:80px">
+                            <img src="assets/icons/yellowCheck64.png"
+                                class="img-responsive" height="48px" width="48px">
+                        </div>
+                        <h6 class="text-center"
+                            style="font-family:Montserrat, 'sans-serif' !important; font-weight:bold">
+                            Odoo Server and DevOps</h6>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center my-4">
+                        <div class="d-flex justify-content-center align-items-center mx-3 my-3"
+                            style="background-color:#fff !important; border-radius:15px !important; height:80px; width:80px">
+                            <img src="assets/icons/yellowCheck64.png"
+                                class="img-responsive" height="48px" width="48px">
+                        </div>
+                        <h6 class="text-center"
+                            style="font-family:Montserrat, 'sans-serif' !important; font-weight:bold">
+                            Partner Consultancy</h6>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center my-4">
+                        <div class="d-flex justify-content-center align-items-center mx-3 my-3"
+                            style="background-color:#fff !important; border-radius:15px !important; height:80px; width:80px">
+                            <img src="assets/icons/yellowCheck64.png"
+                                class="img-responsive" height="48px" width="48px">
+                        </div>
+                        <h6 class="text-center"
+                            style="font-family:Montserrat, 'sans-serif' !important; font-weight:bold">
+                            SAAS and Infraestructure</h6>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center my-4">
+                        <div class="d-flex justify-content-center align-items-center mx-3 my-3"
+                            style="background-color:#fff !important; border-radius:15px !important; height:80px; width:80px">
+                            <img src="assets/icons/yellowCheck64.png"
+                                class="img-responsive" height="48px" width="48px">
+                        </div>
+                        <h6 class="text-center"
+                            style="font-family:Montserrat, 'sans-serif' !important; font-weight:bold">
+                            Odoo Certification Support</h6>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <section class="container" style="margin-top:6rem !important">
+            <div class="row">
+                <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="color:#252a30 !important">Our Industries</h2>
+                    <hr
+                        style="border:3px solid #714B67 !important; background-color:#714B67 !important; width:80px !important; margin-bottom:2rem !important">
+                </div>
+                <div class="col-lg-3">
+                    <div class="my-4 d-flex flex-column justify-content-center"
+                        style="background-color:#f6f8f9 !important; border-radius:10px; padding:2rem !important; height:250px !important">
+                        <img src="assets/icons/mrp128.png"
+                            class="img-responsive mb-3" height="128px" width="128px">
+                        <h5
+                            style="font-family:Montserrat, sans-serif !important; color:#000 !important; font-weight:bold">
+                            Manufacture and Logistic
+                        </h5>
+                        <p style="font-family:Montserrat, sans-serif !important; font-size:0.9rem !important">
+                            Optimize your manufacturing, logistics process and supply chain</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="my-4 d-flex flex-column justify-content-center"
+                        style="background-color:#f6f8f9 !important; border-radius:10px; padding:2rem !important; height:250px !important">
+                        <img src="assets/icons/finance128.png"
+                            class="img-responsive mb-3" height="128px" width="128px">
+                        <h5
+                            style="font-family:Montserrat, sans-serif !important; color:#000 !important; font-weight:bold">
+                            Finance and accounting
+                        </h5>
+                        <p style="font-family:Montserrat, sans-serif !important; font-size:0.9rem !important">
+                            Integrate all your business processes into your accounting and finances</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="my-4 d-flex flex-column justify-content-center"
+                        style="background-color:#f6f8f9 !important; border-radius:10px; padding:2rem !important; height:250px !important">
+                        <img src="assets/icons/sales128.png"
+                            class="img-responsive mb-3" height="128px" width="128px">
+                        <h5
+                            style="font-family:Montserrat, sans-serif !important; color:#000 !important; font-weight:bold">
+                            Commercial and Marketing
+                        </h5>
+                        <p style="font-family:Montserrat, sans-serif !important; font-size:0.9rem !important">
+                            Generate more Leads and sell more with fewer resources</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="my-4 d-flex flex-column justify-content-center"
+                        style="background-color:#f6f8f9 !important; border-radius:10px; padding:2rem !important; height:250px !important">
+                        <img src="assets/icons/hr128.png"
+                            class="img-responsive mb-3" height="128px" width="128px">
+                        <h5
+                            style="font-family:Montserrat, sans-serif !important; color:#000 !important; font-weight:bold">
+                            Payroll, HR and Services
+                        </h5>
+                        <p style="font-family:Montserrat, sans-serif !important; font-size:0.9rem !important">
+                            We help leaders from different industries to continue generating value</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <!-- Footer Section -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-12 col-md-12-col-lg-2">
+                    <h2 style="font-weight:bold; color:#3D3D4E">Support</h2>
+                    <p style="color:#777783">Need help? Get in touch.
+                    </p>
+                    <hr>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="d-flex align-items-center" style="background-color:#F6F8F9; padding:30px">
+                        <div class="mr-4 d-flex justify-content-center align-items-center"
+                            style="background-color:#2AC44D; height:70px; width:70px">
+                            <img src="assets/icons/whatsapp.png" height="52" width="52" style="width:52px; height:52px">
+                        </div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p style="line-height:100%">Say hi to us on WhatsApp!</p>
+                            <span href="https://api.whatsapp.com/send?phone=51946377197">
+                                <p style="font-weight:400; font-size:18px; line-height:80%; color:#714B67">+51 946 377 197</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12 col-md-4">
+                    <div class="d-flex align-items-center" style="background-color:#F6F8F9; padding:30px">
+                        <div class="mr-4 d-flex justify-content-center align-items-center"
+                            style="background-color:#03a9f4; height:70px; width:70px">
+                            <img src="assets/icons/email64.png" height="52" width="52" style="width:52px; height:52px">
+                        </div>
+                        <div>
+                            <h4>Need Help?</h4>
+                            <p style="line-height:100%">Got questions? Write Us</p>
+                            <span href="mailto:leads@ganemo.co">
+                                <p style="font-weight:400; font-size:18px; line-height:80%; color:#714B67">leads@ganemo.co
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <div class="d-flex align-items-center" style="background-color:#F6F8F9; padding:30px">
+                        <div class="mr-4 d-flex justify-content-center align-items-center"
+                            style="background-color:#03a9f4; height:70px; width:70px">
+                            <img src="assets/icons/meet64.png" height="52" width="52" style="width:52px; height:52px">
+                        </div>
+                        <div>
+                            <h4>Schedule Meet?</h4>
+                            <p style="line-height:100%">Let's move faster</p>
+                            <span href="https://www.ganemo.co/appointment/5">
+                                <p style="font-weight:400; font-size:18px; line-height:80%; color:#714B67">Schedule here
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12 text-center ">
+                <a href="mailto:leads@ganemo.co" target="_blank"
+                    style="background-color:#3c6dac; border-radius:35px; font-family:Montserrat; display:inline-block; padding:7px 33px; border:1px solid #3c6dac"
+                    class="mx-1 mb-2 deep-1 deep_hover">
+                    <img class="img" style="width:30px" src="assets/icons/emailus.png">
+                    <span class="pl-2" style="color:#fff; font-size:16px; vertical-align:middle">Email Us</span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=51946377197" target="_blank"
+                    style="background-color:#549c33; font-family:Montserrat; display:inline-block; padding:7px 33px; border:1px solid #549c33; border-radius:35px"
+                    class="mx-1 mb-2 deep-1 deep_hover">
+                    <img class="img" style="width:27px" src="assets/icons/whatsappus.png">
+                    <span class="pl-2" style="color:#fff; font-size:16px; vertical-align:middle">whatsapp Us</span>
+                </a>
+                <a href="https://www.ganemo.co/appointment/5" target="_blank"
+                    style="background-color:#714B67; font-family:Montserrat; display:inline-block; padding:7px 33px; border:1px solid #549c33; border-radius:35px"
+                    class="mx-1 mb-2 deep-1 deep_hover">
+                    <img class="img" style="width:27px" src="assets/icons/meet264.png">
+                    <span class="pl-2" style="color:#fff; font-size:16px; vertical-align:middle">Schedule DEMO</span>
+                </a>
+            </div>
+        </div>
+        <!-- Footer -->
+        <section class="oe_container" style="padding: 2rem 3rem 1rem; background-color: #fff !important;">
+            <div class="row" style="max-width:1440px; margin: 0 auto; margin-right: 3rem; ">
+                <!-- Logo -->
+                <div class="col-lg-12 d-flex justify-content-center align-items-center" style="margin-top: 3rem;">
+                    <img src="./assets/ganemo-logo.png" width="200px" height="auto" />
+                </div>
+                <!-- End of Logo -->
+            </div>
+        </section>
+        <!-- END OF FOOTER -->
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

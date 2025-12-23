@@ -1,0 +1,68 @@
+---Models in module 'ple_sale_book'---
+---Fields in module 'ple_sale_book'---
+account      / account.move            / account.move.bool_pay_invoice : NEW
+---XML records in module 'ple_sale_book'---
+
+UPD ir.actions.act_window: ple_sale_book.account_account_tag_ple_action -> ple_sale_book.action_account_account_tag_ple
+UPD ir.actions.act_window: ple_sale_book.ple_report_sale_action -> ple_sale_book.action_ple_report_sale
+UPD ir.ui.menu: ple_sale_book.account_tag_menu -> ple_sale_book.menu_action_account_account_tag_ple
+UPD ir.ui.menu: ple_sale_book.menu_ple_sale -> ple_sale_book.menu_action_ple_report_sale
+UPD ir.ui.view: ple_sale_book.account_account_form_view_inherit_ple_sale_book -> ple_sale_book.account_account_view_form_inherit_ple_sale_book
+UPD ir.ui.view: ple_sale_book.account_journal_form_view_inherit_ple_sale_book -> ple_sale_book.account_journal_view_form_inherit_ple_sale_book
+UPD ir.ui.view: ple_sale_book.account_move_form_view_inherit_ple_sale_book -> ple_sale_book.account_move_view_form_inherit_ple_sale_book
+UPD ir.ui.view: ple_sale_book.ple_report_sale_tree_view -> ple_sale_book.ple_report_sale_view_tree
+UPD ir.ui.view: ple_sale_book.ple_report_sale_form_view -> ple_sale_book.ple_report_sale_view_form
+UPD ir.ui.view: ple_sale_book.res_company_form_view_inherit_ple_sale_book -> ple_sale_book.res_company_view_form_inherit_ple_sale_book
+UPD ir.ui.view: ple_sale_book.uom_uom_form_view_inherit_ple_sale_book -> ple_sale_book.uom_uom_view_form_inherit_ple_sale_book
+----------------------------------------------------------------
+DEPENDS [ l10n_country_filter ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ account_origin_invoice ]
+model:  account_move
+field:  ple_date,
+        ple_state,
+        ple_its_declared,
+        ple_correlative
+xml_id: account_origin_invoice.account_move_form_view_inherit_account_origin_invoice
+
+
+DEPENDS [ dua_in_invoice ]
+model:  account_move
+field:  year_aduana,
+        code_aduana
+xml_id: 
+
+
+DEPENDS [ account_exchange_currency ]
+model:  account_move
+field:  to_force_exchange_rate,
+        bool_pay_invoice,
+        ple_date,
+        ple_state,
+        ple_its_declared,
+        ple_correlative
+xml_id: account_origin_invoice.account_move_form_view_inherit_account_origin_invoice
+
+model:  account_payment
+field:  to_force_exchange_rate
+xml_id: 
+
+DEPENDS [ l10n_pe ]
+model:  
+field:  
+xml_id: 
+
+DEPENDS [ account ]
+model:  account_journal
+field:  ple_no_include,
+        ple_journal_correlative
+xml_id: account.view_account_journal_form
+
+model:  account_account
+field:  ple_date_account,
+        ple_state_account,
+        ple_selection
+xml_id: account.view_account_journal_form

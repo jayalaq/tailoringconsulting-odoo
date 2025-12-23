@@ -1,0 +1,8 @@
+---Models in module 'holiday_field_payroll'---
+---Fields in module 'holiday_field_payroll'---
+---XML records in module 'holiday_field_payroll'---
+---Filenames in module 'holiday_field_payroll'---
+ADD hr_payslip.py in models
+RM  hr.py in models
+ADD hr_payslip_views.xml in views
+RM  forms.xml in views

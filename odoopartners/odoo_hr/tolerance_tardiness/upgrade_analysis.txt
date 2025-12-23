@@ -1,0 +1,16 @@
+---Models in module 'tolerance_tardiness'---
+---Fields in module 'tolerance_tardiness'---
+---XML records in module 'tolerance_tardiness'---
+UPD ir.ui.view: tolerance_tardiness.resource_calendar_view_form_inherit_tolerance -> tolerance_tardiness.resource_calendar_view_form_inherit_tolerance_tardiness
+----------------------------------------------------------------
+DEPENDS 
+model: hr_attendance
+field:
+xml_id: 
+    hr_attendance.hr_attendance_view_form 
+    hr_attendance.view_attendance_tree 
+    
+model: resource
+field:
+xml_id: 
+    resource.resource_calendar_form

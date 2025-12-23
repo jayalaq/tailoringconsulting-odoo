@@ -1,0 +1,5 @@
+---Models in module 'pos_validation_by_document'---
+---Fields in module 'pos_validation_by_document'---
+---XML records in module 'pos_validation_by_document'---
+----------------------------------------------------------------
+DEPENDS

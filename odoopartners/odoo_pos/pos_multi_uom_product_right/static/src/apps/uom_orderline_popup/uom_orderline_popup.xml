@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_multi_uom_product_right.UomOrderlinePopup" owl="1">
+        <div class="popup popup-text popup-med uom-configurator-popup">
+            <header class="modal-header">
+                <h2 t-esc="props.title"/>
+            </header>
+            <main class="body p-3">
+                <div class="uom-list">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Unidad de medida</th>
+                                <th class="text-center">Precio</th>
+                                <th class="text-center">Proporción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="props.orderline_allow_uoms" t-as="uom" t-key="uom.id">
+                                <tr class="uom-line cursor-pointer" 
+                                    t-on-click="() => this._clickUom(uom)">
+                                    <td class="fw-bold text-center" t-esc="uom.name"/>
+                                    <td class="text-center" t-esc="env.utils.formatCurrency(uom.price)"/>
+                                    <td class="text-center">
+                                        <t t-esc="uom.factor_inv"/><span> </span>
+                                        <t t-esc="props.product.uom_id[1]"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+            <footer class="footer footer-flex modal-footer">
+                <button class="button cancel btn btn-lg btn-secondary" 
+                        t-on-click="cancel">
+                    <t t-esc="props.confirmText"/>
+                </button>
+            </footer>
+        </div>
+    </t>
+</templates>

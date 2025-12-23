@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <data>
+        <function name="automated_links" model="eeff.ple"/>
+        <function name="automed_update_id_external" model="eeff.ple"/>
+    </data>
+    
+</odoo>

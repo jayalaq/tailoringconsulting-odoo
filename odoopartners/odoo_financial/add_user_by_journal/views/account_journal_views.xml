@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_journal_view_form_inherit_add_user_by_journal" model="ir.ui.view">
+        <field name="name">account.journal.view.form.inherit.add_user_by_journal</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_alias_edit']" position="after">
+                <group name="assign">
+                    <field name="assign_to_ids" groups="add_user_by_journal.res_groups_admin_journal_access" widget="many2many_tags"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+   
+
+</odoo>

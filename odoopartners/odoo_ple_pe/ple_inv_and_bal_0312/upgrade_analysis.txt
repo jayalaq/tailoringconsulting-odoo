@@ -1,0 +1,22 @@
+---Models in module 'ple_inv_and_bal_0312'---
+---Fields in module 'ple_inv_and_bal_0312'---
+account                 / account.account                   / account.account.user_type_id DEL
+account                 / account.account                   / account.account_type.include_initial_balance -> account.account.include_initial_balance
+---XML records in module 'ple_inv_and_bal_0312'---
+UPD ir.ui.view: ple_inv_and_bal_0312.ple_inv_and_bal_312_sale_form_view  --> ple_inv_and_bal_0312.ple_report_inv_bal_one_view_form_inherit_ple_inv_and_bal_0312
+----------------------------------------------------------------
+DEPENDS [ ple_sale_book ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ financial_statement_annexes ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ ple_inv_and_bal_0302 ]
+model:  
+field:
+xml_id:
+    ple_inv_and_bal_0302.ple_inv_and_bal_302_sale_form_view

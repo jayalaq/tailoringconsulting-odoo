@@ -1,0 +1,5 @@
+---Models in module 'boost_multi_currency_pos'---
+---Fields in module 'boost_multi_currency_pos'---
+---XML records in module 'boost_multi_currency_pos'---
+----------------------------------------------------------------
+DEPENDS

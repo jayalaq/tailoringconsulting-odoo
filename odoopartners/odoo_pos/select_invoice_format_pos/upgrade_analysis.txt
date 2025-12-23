@@ -1,0 +1,9 @@
+---Models in module 'select_invoice_format_pos'---
+---Fields in module 'select_invoice_format_pos'---
+select_invoice_format_pos      / pos.config          / automatic_print_electronic_invoice (boolean) : This field was moved to the module: pos_ticket_base_template
+select_invoice_format_pos      / pos.config          / automatic_download_electronic_invoice (boolean) : This field was moved to the module: pos_ticket_base_template
+select_invoice_format_pos      / res.config.settings / pos_automatic_print_electronic_invoice (boolean) : This field was moved to the module: pos_ticket_base_template
+select_invoice_format_pos      / res.config.settings / pos_automatic_download_electronic_invoice (boolean) : This field was moved to the module: pos_ticket_base_template
+---XML records in module 'select_invoice_format_pos'---
+----------------------------------------------------------------
+DEPENDS

@@ -1,0 +1,1 @@
+from . import test_view_inventory_button

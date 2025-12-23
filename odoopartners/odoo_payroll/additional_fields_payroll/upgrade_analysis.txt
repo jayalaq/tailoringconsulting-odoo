@@ -1,0 +1,10 @@
+---Models in module 'additional_fields_payroll'---
+---Fields in module 'additional_fields_payroll'---
+---XML records in module 'additional_fields_payroll'---
+UPD ir.ui.view:            hr_contract_form_inherit_additional_fields_payroll    -> hr_contract_view_form_inherit_additional_fields_payroll
+UPD ir.actions.act_window: action_low_reason                                     -> low_reason_action
+----------------------------------------------------------------
+DEPENDS [localization_menu]
+model:
+field:
+xml_id: menu_hr_information_plame

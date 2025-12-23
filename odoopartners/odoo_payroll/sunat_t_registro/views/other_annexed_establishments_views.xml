@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="other_annexed_establishments_view_tree" model="ir.ui.view">
+        <field name="name">other.annexed.establishments.view.tree</field>
+        <field name="model">other.annexed.establishments</field>
+        <field name="arch" type="xml">
+            <tree string="Otros Establecimientos Anexos" editable="bottom">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+</odoo>   

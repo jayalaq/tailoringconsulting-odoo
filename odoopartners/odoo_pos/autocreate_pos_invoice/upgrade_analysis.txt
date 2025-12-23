@@ -1,0 +1,12 @@
+---Models in module 'autocreate_pos_invoice'---
+---Fields in module 'autocreate_pos_invoice'---
+---XML records in module 'autocreate_pos_invoice'---
+UPD ir.ui.view: autocreate_pos_invoice.res_config_settings_form_view_inherit_autocreate_pos_invoice -> autocreate_pos_invoice.res_config_settings_view_form_inherit_autocreate_pos_invoice
+NEW ir.ui.view: autocreate_pos_invoice.pos_order_view_form_inherit_autocreate_pos_invoice
+----------------------------------------------------------------
+DEPENDS
+module: point_of_sale
+field:
+xml_id: 
+    point_of_sale.view_pos_pos_form
+    point_of_sale.res_config_settings_view_form

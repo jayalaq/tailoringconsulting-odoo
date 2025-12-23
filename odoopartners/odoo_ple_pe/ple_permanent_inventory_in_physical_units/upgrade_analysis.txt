@@ -1,0 +1,78 @@
+---Models in module 'ple_permanent_inventory_in_physical_units'---
+---Fields in module 'ple_permanent_inventory_in_physical_units'---
+---XML records in module 'ple_permanent_inventory_in_physical_units'---
+UPD ir.ui.view:product_template_form_view_inherit_ple_stock_valuation_book -> product_template_view_form_inherit_ple_permant_inventory_in_physical_units 
+UPD ir.ui.view:stock_picking_type_form_view_inherit_ple_stock_valuation_book -> stock_picking_type_view_form_inherit_ple_permant_inventory_in_physical_units 
+UPD ir.ui.view:stock_picking_form_view_inherit_ple_stock_valuation_book -> stock_picking_view_form_inherit_ple_permant_inventory_in_physical_units
+UPD ir.ui.view:stock_picking_form_view_inherit_ple_permanent_inventory -> stock_picking_view_form_note_ple_inherit_ple_permant_inventory_in_physical_units
+UPD ir.ui.view:stock_location_form_view_inherit_ple_stock_valuation_book -> stock_location_view_form_inherit_ple_permant_inventory_in_physical_units
+UPD ir.ui.view:stock_move_form_view_inherit_ple_stock_valuation_book -> stock_move_view_form_inherit_ple_permant_inventory_in_physical_units
+UPD ir.ui.view:ple_permanent_inventory_physical_units_form_view -> ple_permanent_inventory_physical_units_view_form
+UPD ir.ui.view:ple_permanent_inventory_physical_units_tree_view -> ple_permanent_inventory_physical_units_view_tree
+UPD ir.ui.view:stock_valuation_layer_form_inherited -> stock_valuation_layer_view_form_inherit_ple_permant_inventory_in_physical_units
+----------------------------------------------------------------
+DEPENDS [ ple_sale_book ]
+model:  ple_report_base
+field:  date_start
+        state
+        date_end
+        company_id
+        date_ple
+        state_send
+        xls_filename
+        txt_filename
+        xls_binary
+        txt_binary
+xml_id:
+
+DEPENDS [ purchase_stock ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ sale_stock ]
+model:  
+field:
+xml_id:
+
+DEPENDS [  stock_account ]
+model:  
+field:
+xml_id:
+        stock_account.stock_valuation_layer_form
+
+DEPENDS [ l10n_pe_delivery_note_ple ]
+model:  
+field:
+xml_id:
+        l10n_pe_delivery_note_ple.stock_picking_view_form_inherit_l10n_pe_delivery_note_ple
+
+DEPENDS [ purchase_document_type_validation ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ account_move_date_from_stock ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ product_unspsc ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ l10n_pe_edi ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ tributary_address_extension ]
+model:  
+field:
+xml_id:
+
+DEPENDS [ invoice_type_document_extension ]
+model:  
+field:
+xml_id:

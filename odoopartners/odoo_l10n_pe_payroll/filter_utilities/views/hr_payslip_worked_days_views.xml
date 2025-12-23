@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="hr_payslip_worked_days_view_search_inherit_filter_utilities" model="ir.ui.view">
+        <field name="name">hr.payslip.worked.days.view.search.inherit.filter_utilities</field>
+        <field name="model">hr.payslip.worked_days</field>
+        <field name="inherit_id" ref="payroll_fields.hr_payslip_worked_days_view_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter" position="after">
+                <separator/>
+                <filter string="Utilidades" name="utilities_filter" domain="['|', ('utilities','=', True),('code', 'in', ['WORK100', 'GLOBAL', 'DDO'])]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_payslip_worked_days_form_view_inherit_filter_utilities" model="ir.ui.view">
+        <field name="name">hr.payslip.worked_days.form.view.inherit.filter_utilities</field>
+        <field name="model">hr.payslip.worked_days</field>
+        <field name="inherit_id" ref="payroll_fields.hr_payslip_worked_days_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="state" position="after">
+                <field name="utilities" column_invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

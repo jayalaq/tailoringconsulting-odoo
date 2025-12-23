@@ -1,0 +1,33 @@
+---Models in module 'types_system_pension'---
+---Fields in module 'types_system_pension'---
+types_system_pension      / hr.employee   / pension_sctr (boolean): DEL
+---XML records in module 'types_system_pension'---
+UPD ir.ui.view: types_system_pension.comis_pension_system_view_tree -> types_system_pension.comis_system_pension_view_tree
+UPD ir.ui.view: types_system_pension.comis_pension_system_view_form -> types_system_pension.comis_system_pension_view_form
+UPD ir.ui.view: types_system_pension.hr_employee_view_form_inherit_system_pension -> types_system_pension.hr_employee_view_form_inherit_types_system_pension
+UPD ir.actions.act_window: types_system_pension.action_tope_afp -> types_system_pension.tope_afp_action
+UPD ir.actions.act_window: types_system_pension.action_pension_system -> types_system_pension.pension_system_action
+----------------------------------------------------------------
+DEPENDS [ hr_contract ]
+model:  hr_employee
+field:  cuspp,
+        is_cuspp,
+        pension_system_id,
+        commission_type,
+xml_id: 
+    hr.view_employee_form
+
+DEPENDS [ localization_menu ]
+model:  account_spot_detraction
+field:  name
+xml_id: 
+    
+model:  account_spot_retention
+field:  name
+xml_id: 
+    
+model:  code_aduana
+field:  name,
+        code
+xml_id: 
+    

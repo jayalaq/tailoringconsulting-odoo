@@ -1,0 +1,5 @@
+---Models in module 'pos_extend_receipt_boost'---
+---Fields in module 'pos_extend_receipt_boost'---
+---XML records in module 'pos_extend_receipt_boost'---
+----------------------------------------------------------------
+DEPENDS

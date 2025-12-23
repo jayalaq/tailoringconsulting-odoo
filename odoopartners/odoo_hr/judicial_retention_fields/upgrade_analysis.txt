@@ -1,0 +1,8 @@
+---Models in module 'judicial_retention_fields'---
+---Fields in module 'judicial_retention_fields'---
+---XML records in module 'judicial_retention_fields'---
+-------------------------------------------------------------
+DEPENDS [HR]
+model:
+field:
+xml_id: view_employee_form

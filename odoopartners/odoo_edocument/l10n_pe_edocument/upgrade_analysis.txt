@@ -1,0 +1,5 @@
+---Models in module 'l10n_pe_edocument'---
+---Fields in module 'l10n_pe_edocument'---
+---XML records in module 'l10n_pe_edocument'---
+----------------------------------------------------------------
+DEPENDS

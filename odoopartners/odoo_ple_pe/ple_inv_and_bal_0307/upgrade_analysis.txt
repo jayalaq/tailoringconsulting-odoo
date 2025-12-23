@@ -1,0 +1,15 @@
+---Models in module 'ple_inv_and_bal_0307'---
+DEL MODEL: ple.inv.bal.line.initial.balances.07
+DEL MODEL: ple.inv.bal.line.final.balances.07
+---Fields in module 'ple_inv_and_bal_0307'---
+DEL FIELD: 'ple.report.inv.bal.07'.line_initial_ids
+DEL FIELD: 'ple.report.inv.bal.07'.line_final_ids
+DEL FIELD: 'ple.report.inv.bal.line.07'.last_date
+DEL FIELD: 'ple.report.inv.bal.line.07'.aml_id
+DEL FIELD: 'ple.report.inv.bal.line.07'.company_id
+UPD FIELD: 'ple.report.inv.bal.line.07'.unspsc_code_id --> 'ple.report.inv.bal.line.07'.unspsc_code
+UPD FIELD: 'ple.report.inv.bal.one'.m2o_ple_report_inv_bal_07 --> 'ple.report.inv.bal.one'.ple_report_inv_bal_07_id
+---XML records in module 'ple_inv_and_bal_0307'---
+UPD ir.ui.view: ple_inv_bal_line_initial_balances_07_tree_view --> ple_inv_bal_line_initial_balances_07_view_tree
+UPD ir.ui.view: ple_inv_bal_inherit_0302_0307 --> ple_report_inv_bal_one_view_form_inherit_ple_inv_and_bal_0307
+---Depends of the module automatic_account_change for the fields pay_sell_force_account_id ---

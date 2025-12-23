@@ -1,0 +1,69 @@
+---Models in module 'additional_fields_employee'---
+---Fields in module 'additional_fields_employee'---
+---XML records in module 'additional_fields_employee'---
+UPD ir.model.access: additional_fields_employee.access_type_contract_hr_contract_manager -> additional_fields_employee.access_type_contract_manager
+UPD ir.model.access: additional_fields_employee.access_employee_regime_hr_contract_manager -> additional_fields_employee.access_employee_regime_manager
+UPD ir.model.access: additional_fields_employee.access_health_regime_all -> additional_fields_employee.access_health_regime
+UPD ir.model.access: additional_fields_employee.acccess_work_occupation_hr_contract_manager -> additional_fields_employee.acccess_work_occupation_manager
+UPD ir.model.access: additional_fields_employee.access_academic_degree_official -> additional_fields_employee.access_academic_degree
+UPD ir.actions.act_window: additional_fields_employee.action_employee_regime -> additional_fields_employee.employee_regime_action
+UPD ir.actions.act_window: additional_fields_employee.action_health_regime -> additional_fields_employee.health_regime_action
+UPD ir.actions.act_window: additional_fields_employee.action_type_contract -> additional_fields_employee.type_contract_action 
+UPD ir.actions.act_window: additional_fields_employee.action_work_occupation -> additional_fields_employee.work_occupation_action
+UPD ir.ui.view: additional_fields_employee.employee_regime_form -> additional_fields_employee.employee_regime_view_form
+UPD ir.ui.view: additional_fields_employee.employee_regime_tree -> additional_fields_employee.employee_regime_view_tree
+UPD ir.ui.view: additional_fields_employee.type_contract_tree -> additional_fields_employee.type_contract_view_tree
+UPD ir.ui.view: additional_fields_employee.type_contract_form -> additional_fields_employee.type_contract_view_form
+UPD ir.ui.view: additional_fields_employee.work_occupation_form -> additional_fields_employee.work_occupation_view_form
+UPD ir.ui.view: additional_fields_employee.work_occupation_tree -> additional_fields_employee.work_occupation_view_tree
+UPD ir.ui.view: additional_fields_employee.health_regime_tree -> additional_fields_employee.health_regime_view_tree
+UPD ir.ui.view: additional_fields_employee.health_regime_form -> additional_fields_employee.health_regime_view_form
+UPD ir.ui.view: additional_fields_employee.hr_contract_form_inherit_additional_fields_employee -> additional_fields_employee.hr_contract_view_form_inherit_additional_fields_employee
+----------------------------------------------------------------
+DEPENDS [ hr_contract ]
+model:  hr_contract
+field:  labor_regime_id,
+        labor_condition_id,
+        maximum_working_day,
+        atypical_cumulative_day,
+        nocturnal_schedule,
+        unionized,
+        is_practitioner,
+        work_occupation_id
+xml_id: 
+        hr_contract.hr_contract_view_form
+
+DEPENDS [ hr ]
+model:  hr_employee
+field:  academic_degree_id,
+        disability,
+        health_regime_id,
+        fields_1_str,
+        fields_2_str,
+        fields_3_str,
+        fields_4_str,
+        fields_1_value,
+        fields_2_value,
+        fields_3_value,
+        fields_4_value,
+        fields_1_active,
+        fields_2_active,
+        fields_3_active,
+        fields_4_active
+xml_id: 
+        hr.view_employee_form
+
+DEPENDS [ localization_menu ]
+model:  account_spot_detraction
+field:  name
+xml_id: 
+
+model:  account_spot_retention
+field:  name
+xml_id: 
+
+model:  code_aduana
+field:  name,
+        code
+xml_id: 
+

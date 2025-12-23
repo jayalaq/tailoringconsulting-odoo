@@ -1,0 +1,6 @@
+---Models in module 'massive_payment_collections'---
+UPD native method fields_view_get -> _get_view
+---Fields in module 'massive_payment_collections'---
+---XML records in module 'massive_payment_collections'---
+---XML change attr in the wizard massive_payment_collections-----
+UPD view_massive_payment_collections_form, change attrs -> invisible, required

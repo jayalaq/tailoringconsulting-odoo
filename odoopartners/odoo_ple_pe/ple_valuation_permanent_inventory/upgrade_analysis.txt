@@ -1,0 +1,10 @@
+---Models in module 'ple_valuation_permanent_inventory'---
+---Fields in module 'ple_valuation_permanent_inventory'---
+---XML records in module 'ple_valuation_permanent_inventory'---
+UPD ir.ui.view: ple_valuation_permament_inventory_inherit_ple_report_stock_valuation_book_units_form_view -> ple_permanent_inventory_physical_units_inherit_ple_valuation_permanent_inventory
+----------------------------------------------------------------
+DEPENDS [ ple_permanent_inventory_in_physical_units ]
+model:  
+field:
+xml_id:
+    ple_permanent_inventory_in_physical_units.ple_permanent_inventory_physical_units_view_form

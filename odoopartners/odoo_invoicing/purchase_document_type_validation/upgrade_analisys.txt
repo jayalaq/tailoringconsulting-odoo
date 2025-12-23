@@ -1,0 +1,19 @@
+---Models in module 'purchase_document_type_validation'---
+---Fields in module 'purchase_document_type_validation'---
+---XML records in module 'purchase_document_type_validation'---
+UPD l10n_latam_document_type_form_view_inherit_purchase_document_type_validation , change attrs -> invisible 
+UPD account_move_form_view_inherit_purchase_document_type_validation , change attrs -> invisible , required , readonly
+
+----------------------------------------------------------------
+DEPENDS 
+model: l10n_latam.document.type
+field:
+xml_id: 
+    l10n_latam_invoice_document.view_document_type_tree
+    l10n_latam_invoice_document.view_document_type_form
+    l10n_latam_invoice_document.view_move_form
+    
+model: account.move
+field:
+xml_id: 
+    l10n_latam_invoice_document.view_move_form

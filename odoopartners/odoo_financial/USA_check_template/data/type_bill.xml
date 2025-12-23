@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <record id="type_bill" model="ir.config_parameter">
+        <field name="key">USA.type_bill</field>
+        <field name="value"></field>
+    </record>
+</odoo>

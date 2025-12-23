@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-name="ReceiptHeader" t-inherit="point_of_sale.ReceiptHeader" t-inherit-mode="extension" owl="1">
+		<xpath expr="//div[hasclass('pos-receipt-contact')]" t-operation="after">
+			<br/>
+            <t t-if="props.data.is_order_number and props.data.order?.name">
+                <div align="center">
+                    <t t-if="props.data.is_order_number">
+                        <t t-esc="props.data.order.name"/><br/>
+                    </t>
+                </div>
+            </t>
+            <t t-if="props.data.is_customer_details">
+                <br/>
+                <t t-if="props.data.order?.partner">
+                    <div t-attf-style="font-size:{{ props.data.font_size || 13 }}px; font-weight:{{ props.data.is_bold ? 'bold' : 'normal' }};" align="center">
+                        <t t-if="props.data.is_customer_name">
+                            <t t-if="props.data.order.partner.name"> 
+                                <t t-if="props.data.customer_name_custom_title"> 
+                                    <t t-esc="props.data.customer_name_custom_title"/> :
+                                </t>
+                                <t t-esc="props.data.order.partner.name"/><br/>
+                            </t>
+                        </t>
+                        <t t-if="props.data.customer_address">
+                            <t t-if="props.data.order.partner.address">
+                                <t t-if="props.data.customer_address_custom_title"> 
+                                    <t t-esc="props.data.customer_address_custom_title"/> :
+                                </t>
+                                <t t-esc="props.data.order.partner.address"/><br/>
+                            </t>
+                        </t>
+                        <t t-if="props.data.customer_mobile">
+                            <t t-if="props.data.order.partner.mobile">
+                                <t t-if="props.data.customer_mobile_custom_title"> 
+                                    <t t-esc="props.data.customer_mobile_custom_title"/> :
+                                </t>
+                                <t t-esc="props.data.order.partner.mobile"/><br/>
+                            </t>
+                        </t>
+                        <t t-if="props.data.customer_phone">
+                            <t t-if="props.data.order.partner.phone">
+                                <t t-if="props.data.customer_phone_custom_title"> 
+                                    <t t-esc="props.data.customer_phone_custom_title"/> :
+                                </t>
+                                <t t-esc="props.data.order.partner.phone"/><br/>
+                            </t>
+                        </t>
+                        <t t-if="props.data.customer_email">
+                            <t t-if="props.data.order.partner.email">
+                                <t t-if="props.data.customer_email_custom_title"> 
+                                    <t t-esc="props.data.customer_email_custom_title"/> :
+                                </t>
+                                <t t-esc="props.data.order.partner.email"/><br/>
+                            </t>
+                        </t>
+                        <t t-if="props.data.customer_vat">
+                            <t t-if="props.data.order.partner.vat">
+                                <t t-if="props.data.customer_vat_custom_title"> 
+                                    <t t-esc="props.data.customer_vat_custom_title"/> :
+                                </t>
+                                <t t-esc="props.data.order.partner.vat"/><br/>
+                            </t>
+                        </t>
+                    </div>
+                </t>
+            </t>
+            <t t-if="props.data.order?.to_invoice">
+                <t t-if="props.data.invoice_number">
+                    <br/>
+                    <div align="center">
+                        <strong><u>Invoice Number</u></strong><br/>
+                        <span>
+                            <t t-esc="props.data.order?.invoice_number"/>
+                        </span>
+                    </div>
+                    <br/>
+                </t>
+            </t>
+		</xpath>
+	</t>
+	<t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+		<xpath expr="//div[hasclass('pos-receipt')]" position="inside">
+			<t t-if="props.data.headerData?.order_barcode and props.data.headerData?.barcode_selection">
+				<t t-if="props.data.headerData.barcode_selection == 'qrcode' and props.data.headerData.qrcode">
+					<div class="text-center" align="center">
+						<br/>
+						<img t-att-src="props.data.headerData.qrcode" style="height: 200px;width: 200px;"/>
+					</div>
+				</t>
+				<t t-if="props.data.headerData.barcode_selection == 'barcode' and props.data.headerData.barcode">
+					<div class="text-center" align="center">
+						<br/>
+						<img t-att-src="props.data.headerData.barcode" style="height: 50px;width: 230px;"/>
+					</div>
+				</t>
+			</t>
+		</xpath>
+	</t>
+</templates>

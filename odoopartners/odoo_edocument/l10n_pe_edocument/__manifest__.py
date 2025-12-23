@@ -1,0 +1,37 @@
+{
+    'name': 'Electronic Invoicing Peru',
+    'version': '17.0.1.4.23',
+    'author': 'Ganemo',
+    'website': 'https://www.ganemo.co',
+    'module_type': 'official',
+    'category': 'Accounting/Localizations/EDI',
+    'summary': 'Electronic Invoicing Peru',
+    'description': """
+Electronic Invoicing Peru
+    """,
+    'depends': [
+        'l10n_pe_edi',
+        'tributary_address_extension',
+        'account_discount_global',
+        'account_exchange_currency',
+        'payment_term_lines',
+        'l10n_pe_catalog',
+        'carrier_reference_number_invoice',
+        'aditional_document_reference',
+        'account_origin_invoice',
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/ubl_20_templates.xml',
+        'wizards/account_invoice_correction_views.xml',
+        'views/account_move_views.xml',
+        'views/res_config_settings_views.xml',
+    ],
+    'application': False,
+    'installable': True,
+    'auto_install': False,
+    'license': 'Other proprietary',
+    'currency': 'USD',
+    'price': 200.00,
+    'post_init_hook': '_edocument_post_init',
+}

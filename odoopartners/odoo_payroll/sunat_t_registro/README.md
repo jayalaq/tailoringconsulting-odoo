@@ -1,0 +1,5 @@
+# Sunat T Registro
+
+## Summary
+
+This module facilitates the issuance of files necessary for mass upload to the T-Registry, complying with SUNAT specifications. Designed to be compatible with both the community and enterprise versions of Odoo, the module integrates various functionalities that allow efficient management of employees and their associated records. It includes key dependencies such as hr, contacts, account, and more, ensuring broad coverage of operational needs. The files generated follow the structure required by SUNAT, including detailed fields for employee and successor data, such as start and end dates, document types, and contact information. In addition, the module allows the generation of specific files for registrations and cancellations, as well as information updates, ensuring that all records are accurate and up-to-date. The implementation is simple and it is recommended to test the community version to ensure its correct functioning.

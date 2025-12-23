@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="ple_permanent_inventory_physical_units_action" model="ir.actions.act_window">
+        <field name="name">Inventario Permanente en Unidades Fisicas y Valorizadas</field>
+        <field name="res_model">ple.permanent.inventory.physical.units</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+        id="menu_ple_permanent_inventory_physical_units" 
+        name="Inventario Permanente - Kardex"
+        parent="ple_sale_book.menu_ple_pe_monthly" 
+        action="ple_permanent_inventory_physical_units_action"
+        sequence="7"
+    />
+
+</odoo>

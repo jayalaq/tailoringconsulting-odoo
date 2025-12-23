@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Addition payroll report-->
+
+    <record id="paperformat_payslip_additional_report" model="report.paperformat">
+        <field name="name">Payslip Additional - Paperformat</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">15</field>
+        <field name="margin_bottom">15</field>
+        <field name="margin_left">15</field>
+        <field name="margin_right">15</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="report_additional_report_hr_payslip" model="ir.actions.report">
+        <field name="name">Addition report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="print_report_name">object.struct_id.get_additional_certificate_name()</field>
+        <field name="model">hr.payslip</field>
+        <field name="report_name">setting_voucher.template_additional_report_hr_payslip</field>
+        <field name="report_file">setting_voucher.template_additional_report_hr_payslip</field>
+        <field name="paperformat_id" ref="setting_voucher.paperformat_payslip_additional_report"/>
+        <field name="binding_model_id" ref="model_hr_payslip"/>
+    </record>
+
+    <template id="template_additional_report_hr_payslip">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div name="data_report"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>
