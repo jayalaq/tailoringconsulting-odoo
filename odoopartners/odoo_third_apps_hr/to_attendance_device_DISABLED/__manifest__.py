@@ -264,7 +264,7 @@ Dù thế nào đi nữa, bạn luôn có thể liên hệ với chúng tôi qua
     """,
 
     # any module necessary for this one to work correctly
-    'depends': ['hr_attendance', 'to_base'],
+    'depends': ['hr_attendance'],
 
     'external_dependencies': {
         'python': ['setuptools'],
@@ -293,7 +293,7 @@ Dù thế nào đi nữa, bạn luôn có thể liên hệ với chúng tôi qua
         'wizard/device_confirm_wizard.xml',
     ],
     'images': ['static/description/main_screenshot.png'],
-    'installable': True,
+    'installable': False,
     'price': 198.9,
     'currency': 'EUR',
     'license': 'OPL-1',
