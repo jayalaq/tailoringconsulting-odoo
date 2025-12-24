@@ -132,7 +132,7 @@ Mô-đun cơ sở cung cấp các công cụ và tiện ích bổ sung cho các 
     'post_init_hook': 'post_init_hook',
     'uninstall_hook': 'uninstall_hook',
     'post_load': 'post_load',
-    'installable': True,
+    'installable': False,
     'auto_install': ['web'],
     'price': 9.9,
     'currency': 'EUR',
